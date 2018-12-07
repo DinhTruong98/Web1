@@ -13,6 +13,12 @@ class hangSanXuatBUS
         $hangSanXuatDAO = new hangSanXuatDAO();
         return $hangSanXuatDAO->getAll();
     }
+    public function getByID($BID)
+    {
+        $hangSanXuatDAO = new hangSanXuatDAO();
+        return $hangSanXuatDAO->getByID($BID);
+    }
+
 }
 
 ?>

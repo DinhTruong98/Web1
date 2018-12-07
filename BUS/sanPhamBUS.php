@@ -17,6 +17,39 @@ class sanPhamBUS
         }
     }
 
+    public function getByID($pid)
+    {
+        $sanPhamDAO = new sanPhamDAO();
+        return $sanPhamDAO->getByID($pid);
+    }
+
+    public function getByTopSold()
+    {
+        {
+            $sanPhamDAO = new sanPhamDAO();
+            if ($this->isNull($sanPhamDAO->getBySold()) == false) {
+                echo "<h1>Sản phẩm đang tạm hết hàng</h1>";
+                return $sanPhamDAO->getBySold();
+            } else {
+                return $sanPhamDAO->getBySold();
+            }
+        }
+    }
+
+    public function getByTopNew()
+    {
+        {
+            $sanPhamDAO = new sanPhamDAO();
+            if ($this->isNull($sanPhamDAO->getNewest()) == false) {
+                echo "<h1>Sản phẩm đang tạm hết hàng</h1>";
+                return $sanPhamDAO->getNewest();
+            } else {
+                return $sanPhamDAO->getNewest();
+            }
+        }
+    }
+
+
     public function getByBrand($brandID)
     {
         $sanPhamDAO = new sanPhamDAO();

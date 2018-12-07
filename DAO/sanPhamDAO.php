@@ -35,6 +35,87 @@ class sanPhamDAO extends db
         return $listSanPham;
     }
 
+    public function getByID($pid)
+    {
+        $sanPham = new sanPham();
+        $query = "SELECT MaSanPham, TenSanPham, HinhURL, GiaSanPham, NgayNhap, SoLuongTon, SoLuongBan, SoLuotXem, MoTa, BiXoa, MaLoaiSanPham, MaHangSanXuat FROM sanpham WHERE BiXoa = 0 and MaSanPham = $pid";
+        $result = $this->executeQuery($query);
+        while ($row = mysqli_fetch_array($result))
+        {
+            $sanPham = new sanPham();
+            $sanPham->tenSanPham = $row["TenSanPham"];
+            $sanPham->maSanPham = $row["MaSanPham"];
+            $sanPham->hinhURL = $row["HinhURL"];
+            $sanPham->giaSanPham = $row["GiaSanPham"];
+            $sanPham->ngayNhap = $row["NgayNhap"];
+            $sanPham->soLuongTon = $row["SoLuongTon"];
+            $sanPham->soLuongBan = $row["SoLuongBan"];
+            $sanPham->soLuotXem = $row["SoLuotXem"];
+            $sanPham->moTa = $row["MoTa"];
+            $sanPham->biXoa = $row["BiXoa"];
+            $sanPham->maLoaiSanPham = $row["MaLoaiSanPham"];
+            $sanPham->maHangSanXuat = $row["MaHangSanXuat"];
+
+        }
+        return $sanPham;
+    }
+
+
+    public function getNewest()
+    {
+        $listSanPham = array();
+        $query = "SELECT MaSanPham, TenSanPham, HinhURL, GiaSanPham, NgayNhap, SoLuongTon, SoLuongBan, SoLuotXem, MoTa, BiXoa, MaLoaiSanPham, MaHangSanXuat FROM sanpham WHERE BiXoa = 0 ORDER BY NgayNhap DESC LIMIT 10";
+        $result = $this->executeQuery($query);
+        while ($row = mysqli_fetch_array($result))
+        {
+            $sanPham = new sanPham();
+            $sanPham->tenSanPham = $row["TenSanPham"];
+            $sanPham->maSanPham = $row["MaSanPham"];
+            $sanPham->hinhURL = $row["HinhURL"];
+            $sanPham->giaSanPham = $row["GiaSanPham"];
+            $sanPham->ngayNhap = $row["NgayNhap"];
+            $sanPham->soLuongTon = $row["SoLuongTon"];
+            $sanPham->soLuongBan = $row["SoLuongBan"];
+            $sanPham->soLuotXem = $row["SoLuotXem"];
+            $sanPham->moTa = $row["MoTa"];
+            $sanPham->biXoa = $row["BiXoa"];
+            $sanPham->maLoaiSanPham = $row["MaLoaiSanPham"];
+            $sanPham->maHangSanXuat = $row["MaHangSanXuat"];
+
+            $listSanPham[] = $sanPham;
+
+        }
+        return $listSanPham;
+    }
+
+    public function getBySold()
+    {
+        $listSanPham = array();
+        $query = "SELECT MaSanPham, TenSanPham, HinhURL, GiaSanPham, NgayNhap, SoLuongTon, SoLuongBan, SoLuotXem, MoTa, BiXoa, MaLoaiSanPham, MaHangSanXuat FROM sanpham WHERE BiXoa = 0 ORDER BY SoLuongBan DESC LIMIT 10";
+        $result = $this->executeQuery($query);
+        while ($row = mysqli_fetch_array($result))
+        {
+            $sanPham = new sanPham();
+            $sanPham->tenSanPham = $row["TenSanPham"];
+            $sanPham->maSanPham = $row["MaSanPham"];
+            $sanPham->hinhURL = $row["HinhURL"];
+            $sanPham->giaSanPham = $row["GiaSanPham"];
+            $sanPham->ngayNhap = $row["NgayNhap"];
+            $sanPham->soLuongTon = $row["SoLuongTon"];
+            $sanPham->soLuongBan = $row["SoLuongBan"];
+            $sanPham->soLuotXem = $row["SoLuotXem"];
+            $sanPham->moTa = $row["MoTa"];
+            $sanPham->biXoa = $row["BiXoa"];
+            $sanPham->maLoaiSanPham = $row["MaLoaiSanPham"];
+            $sanPham->maHangSanXuat = $row["MaHangSanXuat"];
+
+            $listSanPham[] = $sanPham;
+
+        }
+        return $listSanPham;
+    }
+
+
     public function getByBrand($brandID)
     {
         $listSanPham = array();

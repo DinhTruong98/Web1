@@ -43,6 +43,8 @@ include 'BUS/sanPhamBUS.php'
         <br />
     </div>
 
+
+    <h1></h1>
     <div class="container">
         <?php
         $a = 1;
@@ -59,6 +61,9 @@ include 'BUS/sanPhamBUS.php'
                 break;
             case 3:
                 include 'GUI/pListProductByBrand.php';
+                break;
+            case 4:
+                include 'GUI/pProductDetail.php';
                 break;
         }
 

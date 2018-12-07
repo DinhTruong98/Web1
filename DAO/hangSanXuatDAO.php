@@ -25,6 +25,23 @@ class hangSanXuatDAO extends db
 
     }
 
+    public function getByID($BID)
+    {
+        $hangSanXuat = new hangSanXuat();
+        $query = "SELECT TenHangSanXuat, MaHangSanXuat FROM HangSanXuat WHERE BiXoa=0 AND MaHangSanXuat = $BID";
+        $result = $this->executeQuery($query);
+        while ($row = mysqli_fetch_array($result))
+        {
+
+            $hangSanXuat->tenHangSanXuat = $row["TenHangSanXuat"];
+            $hangSanXuat->maHangSanXuat = $row["MaHangSanXuat"];
+            $listHangSanXuat[] = $hangSanXuat;
+
+        }
+        return $hangSanXuat;
+
+
+    }
 }
 
 ?>

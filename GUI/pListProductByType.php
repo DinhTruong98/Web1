@@ -2,12 +2,7 @@
 <dl>
 
     <?php
-    /**
-     * Created by PhpStorm.
-     * User: D
-     * Date: 12/6/2018
-     * Time: 7:24 PM
-     */
+
     if (isset($_GET['type']) == false)
     {
         header('location:index.php');
@@ -22,13 +17,13 @@
             echo "    
     <dd>
         <div class='card' style='width: 26rem;'>
-            <img class='card-img-top' src='$sanPham->hinhURL' alt='Card image cap'>
+            <div class='div-list-img'><img class='list-img' src='$sanPham->hinhURL' alt='Card image cap'></div>
             <div class='card-body'>
                 <h5 class='card-title'><b>$sanPham->tenSanPham</b></h5>
-                <p class='card-text'>$sanPham->moTa</p>
+                <p class='card-text'><b>Giá: </b>$sanPham->giaSanPham $</p>
                 <a href='#' class='btn btn-success'>Thêm vào giỏ</a>
                 <br />
-                <a href='#' class='btn'>Xem chi tiết</a>
+                <a href='index.php?a=4&pid=$sanPham->maSanPham' class='btn'>Xem chi tiết</a>
             </div>
         </div>
     </dd>";

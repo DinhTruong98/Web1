@@ -13,6 +13,11 @@ class loaiSanPhamBUS
         return $loaiSanPhamDAO->getAll();
     }
 
+    public function getBuTID($TID)
+    {
+        $loaiSanPhamDAO = new loaiSanPhamDAO();
+        return $loaiSanPhamDAO->getByTID($TID);
+    }
 
 }
 
