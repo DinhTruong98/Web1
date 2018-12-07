@@ -1,15 +1,8 @@
 <div class="container"
-
-
 <dl>
 
 <?php
-/**
- * Created by PhpStorm.
- * User: D
- * Date: 12/6/2018
- * Time: 7:24 PM
- */
+
     if (isset($_GET['brand']) == false)
     {
         header('location:index.php');

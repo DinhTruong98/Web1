@@ -1,6 +1,5 @@
 <div class="container"
 <dl>
-
     <?php
 
     if (isset($_GET['type']) == false)
@@ -12,6 +11,7 @@
         $typeID = $_GET['type'];
         $sanPhamBUS = new sanPhamBUS();
         $listSanPham = $sanPhamBUS->getByType($typeID);
+
         foreach ($listSanPham as $sanPham)
         {
             echo "    

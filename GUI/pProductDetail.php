@@ -19,7 +19,7 @@
     $hangSanXuatBUS = new hangSanXuatBUS();
     $hangSanXuat = $hangSanXuatBUS->getByID($sanPham->maHangSanXuat);
     $loaiSanPhamBUS = new loaiSanPhamBUS();
-    $loaiSanPham = $loaiSanPhamBUS->getBuTID($sanPham->maLoaiSanPham);
+    $loaiSanPham = $loaiSanPhamBUS->getByTID($sanPham->maLoaiSanPham);
 
 
     echo "

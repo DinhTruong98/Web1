@@ -146,3 +146,10 @@ h2, h4
 {
     text-align: center;
 }
+
+#footer
+{
+    color: #FFFFFF;
+    background-color: #222222;
+    text-align: center;
+}

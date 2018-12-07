@@ -69,5 +69,8 @@ include 'BUS/sanPhamBUS.php'
 
         ?>
     </div>
+    <?php
+        include 'GUI/footer.php';
+    ?>
 </body>
 </html>
