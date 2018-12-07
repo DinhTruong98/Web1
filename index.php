@@ -1,17 +1,21 @@
 
 <?php
+session_start();
 include 'DAO/db.php';
 include 'DTO/hangSanXuat.php';
 include 'DTO/loaiSanPham.php';
 include 'DTO/sanPham.php';
+include 'DTO/taiKhoan.php';
 
 include 'DAO/hangSanXuatDAO.php';
 include 'DAO/loaiSanPhamDAO.php';
 include 'DAO/sanPhamDAO.php';
+include 'DAO/taiKhoanDAO.php';
 
 include 'BUS/hangSanXuatBUS.php';
 include 'BUS/loaiSanPhamBUS.php';
-include 'BUS/sanPhamBUS.php'
+include 'BUS/sanPhamBUS.php';
+include 'BUS/taiKhoanBUS.php';
 
 ?>
 
@@ -64,6 +68,9 @@ include 'BUS/sanPhamBUS.php'
                 break;
             case 4:
                 include 'GUI/pProductDetail.php';
+                break;
+            case 101:
+                include "GUI/exLogin.php";
                 break;
         }
 
