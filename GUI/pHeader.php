@@ -47,21 +47,8 @@
             </li>
 
         </ul>
-
-
         <?php
-        if (isset($_POST['account']) == true)
-            echo "<li><a href=''#'><span class=\"glyphicon glyphicon-user\"></span> Đăng kí</a></li>";
+            include 'GUI/mLogin/mLogin.php';
         ?>
-
-
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Đăng kí</a></li>
-            <li><a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModal"><span class="glyphicon glyphicon-log-in" ></span> Đăng nhập</a></li>
-
-            <?php
-                include 'GUI/pLogin.php';
-            ?>
-        </ul>
     </div>
 </nav>

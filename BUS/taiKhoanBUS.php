@@ -13,7 +13,15 @@ class taiKhoanBUS
         $taiKhoanDAO = new taiKhoanDAO();
         if ($taiKhoanDAO->login($taiKhoan, $matKhau) == true)
         {
-            echo 'Dang nhap thanh cong';
+            return true;
+        }else return false;
+    }
+
+    public function loginByAdmin($taiKhoan, $matKhau)
+    {
+        $taiKhoanDAO = new taiKhoanDAO();
+        if ($taiKhoanDAO->loginByAdmin($taiKhoan, $matKhau) == true)
+        {
             return true;
         }else return false;
     }

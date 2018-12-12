@@ -70,7 +70,10 @@ include 'BUS/taiKhoanBUS.php';
                 include 'GUI/pProductDetail.php';
                 break;
             case 101:
-                include "GUI/exLogin.php";
+                include "GUI/mLogin/exLogin.php";
+                break;
+            case 102:
+                include "GUI/mLogin/exLogout.php";
                 break;
         }
 
