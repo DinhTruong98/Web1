@@ -69,11 +69,17 @@ include 'BUS/taiKhoanBUS.php';
             case 4:
                 include 'GUI/pProductDetail.php';
                 break;
+            case 5:
+                include 'GUI/mRegister/frmRegis.php';
+                break;
             case 101:
                 include "GUI/mLogin/exLogin.php";
                 break;
             case 102:
                 include "GUI/mLogin/exLogout.php";
+                break;
+            case 103:
+                include "GUI/mRegister/exRegis.php";
                 break;
         }
 
