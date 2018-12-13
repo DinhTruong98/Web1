@@ -7,12 +7,16 @@ if (isset($_POST['account']) == true) {
     if($taiKhoanBUS->loginByAdmin($acc, $pass) == true)
     {
         $_SESSION['account'] = $acc;
-        header("location: GUI/admin.php");
+        echo "<a class='h1' href='index.php'>Đăng nhập thành công click vào đây để trở về trang chủ</a>";
     }else
         if($taiKhoanBUS->login($acc, $pass) == true)
         {
             $_SESSION['account'] = $acc;
-            header("location: index.php");
+            echo "<a class='h1' href='index.php'>Đăng nhập thành công click vào đây để trở về trang chủ</a>";
+            //header("index.php");
+        }else
+        {
+            echo 'Sai tài khoản hoặc mật khẩu, vui lòng kiểm tra lại';
         }
 }
 ?>

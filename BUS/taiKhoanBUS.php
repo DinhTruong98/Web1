@@ -11,10 +11,13 @@ class taiKhoanBUS
     public function login($taiKhoan, $matKhau)
     {
         $taiKhoanDAO = new taiKhoanDAO();
-        if ($taiKhoanDAO->login($taiKhoan, $matKhau) == true)
+
+        if ($taiKhoanDAO->kiemTaiKhoan($taiKhoan, $matKhau) == false)
         {
-            return true;
-        }else return false;
+            //echo 'Tài khoản không tồn tại';
+            return false;
+        }
+        return true;
     }
 
     public function loginByAdmin($taiKhoan, $matKhau)
@@ -24,6 +27,24 @@ class taiKhoanBUS
         {
             return true;
         }else return false;
+    }
+
+    public function register($taiKhoan)
+    {
+        $taiKhoanDAO = new taiKhoanDAO();
+        if ($taiKhoanDAO->kiemTraTonTai($taiKhoan->tenDangNhap) == true)
+        {
+            return false;
+
+        }
+        else
+        {
+            $taiKhoanDAO->register($taiKhoan);
+            if ($taiKhoanDAO->kiemTraTonTai($taiKhoan->tenDangNhap) == true)
+            {
+                return true;
+            }else return false;
+        }
     }
 }
 

@@ -39,9 +39,9 @@
                 <input type="password" name="password" placeholder="Mật khẩu" required>
                 <input type="text" name="displayname" placeholder="Tên hiển thị" required>
                 <input type="email" name="email" placeholder="Email" required>
-                <input type="tel" name="phone" placeholder="Số điện thoại" required>
-                <input type="text" name="adress" placeholder="Địa chỉ" required>
-                <input type="submit" name="regis" class="login loginmodal-submit" value="Đăng kí" required>
+                <input type="tel" name="phonenumber" placeholder="Số điện thoại" required>
+                <input type="text" name="address" placeholder="Địa chỉ" required>
+                <input type="submit" class="login loginmodal-submit" value="Đăng kí" required>
             </form>
 
         </div>
