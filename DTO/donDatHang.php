@@ -17,7 +17,7 @@ class donDatHang
     public function  __construct()
     {
         $this->maDonDatHang = "";
-        $this->ngayLap=(1/1/1998);
+        $this->ngayLap = '1/1/1998';
         $this->tongThanhTien=0;
         $this->maTaiKhoan=0;
         $this->maTinhTrang=0;

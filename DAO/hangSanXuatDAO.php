@@ -13,8 +13,10 @@ class hangSanXuatDAO extends db
         $listHangSanXuat = array();
         $query = "SELECT TenHangSanXuat, MaHangSanXuat FROM HangSanXuat WHERE  BiXoa=0";
         $result = $this->executeQuery($query);
+        //căt đối tượng thành từng dòng.
         while ($row = mysqli_fetch_array($result))
         {
+            //cắt từng cột trong row, từng biến   extract($row);
             $hangSanXuat = new hangSanXuat();
             $hangSanXuat->tenHangSanXuat = $row["TenHangSanXuat"];
             $hangSanXuat->maHangSanXuat = $row["MaHangSanXuat"];
