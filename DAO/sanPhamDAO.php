@@ -169,6 +169,36 @@ class sanPhamDAO extends db
         }
         return $listSanPham;
     }
+
+    public function INSERT($SanPham)
+    {
+        $sql = "INSERT INTO SanPham (MaSanPham, TenSanPham, HinhURl, GiaSanPham, NgayNhap, SoLuongTon, SoLuongBan, SoLuotXem, MoTa, BiXoa, MaLoaiSanPham, MaHangSanXuat) 
+        values ($SanPham->MaSanPham, '$SanPham->TenSanPham','$SanPham->HinhURL', $SanPham->GiaSanPham, $SanPham->NgayNhap, $SanPham->SoLuonTon, 
+         $SanPham->SoLuongBan, $SanPham->SoLuotXem, $SanPham->MoTa, $SanPham->BiXoa, $SanPham->MaLoaiSanPham, $SanPham->MaHangSanPham )";
+        $this->executeQuery($sql);
+    }
+
+    public function DELETE($SanPham)
+    {
+        $sql = "DELETE FROM SanPham where MaSanPham = $SanPham->MaSanPham";
+        $this->executeQuery($sql);
+    }
+
+    public function SETDETELE($SanPham)
+    {
+
+    }
+
+    public function UNSETDELETE($SanPham)
+    {
+
+    }
+
+    public function UPDATE($SanPham)
+    {
+
+    }
+
 }
 
 ?>

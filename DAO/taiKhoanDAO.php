@@ -63,6 +63,36 @@ class taiKhoanDAO extends db
         }
         return true;
     }
+
+    public function INSERT($TaiKhoan)
+    {
+        $sql = "INSERT INTO TaiKhoan(MaTaiKhoan, TenDangNhap, MatKhau, TenHienThi, DiaChi, DienThoai, Email, BiXoa, MaLoaiTaiKhoan) 
+        values ($TaiKhoan->MaTaiKhoan,'$TaiKhoan->TenDangNhap', '$TaiKhoan->MatKhau', '$TaiKhoan->TenHienThi', '$TaiKhoan->DiaChi',
+        '$TaiKhoan->DienThoai', '$TaiKhoan->Email', $TaiKhoan->BiXoa, $TaiKhoan->MaLoaiTaiKhoan)";
+        $this->executeQuery($sql);
+    }
+
+    public function DELETE($TaiKhoan)
+    {
+        $sql = "DELETE FROM TaiKhoan where MaTaiKhoan = $TaiKhoan->MaTaiKhoan";
+        $this->executeQuery($sql);
+
+    }
+
+    public function SETDETELE($TaiKhoan)
+    {
+
+    }
+
+    public function UNSETDELETE($TaiKhoan)
+    {
+
+    }
+
+    public function UPDATE($TaiKhoan)
+    {
+
+    }
 }
 
 ?>

@@ -40,8 +40,36 @@ class loaiTaiKhoanDAO extends db
 
         return $LoaiTaiKhoan;
     }
+
+    public function INSERT($LoaiTaiKhoan)
+    {
+        $sql = "INSERT INTO LoaiTaiKhoan(MaLoaiTaiKhoan, TenLoaiTaiKhoan) values ($LoaiTaiKhoan->MaTenLoaiTaiKhoan, '$LoaiTaiKhoan->TenLoaiTaiKhoan')";
+        $this->executeQuery($sql);
+    }
+
+    public function  DELETE($LoaiTaiKhoan)
+    {
+        $sql = "DELETE FROM LoaiTaiKhoan where MaLoaiTaiKhoan = $LoaiTaiKhoan->MaLoaiTaiKhoan";
+        $this->executeQuery($sql);
+    }
+
+    public function SetDelete($LoaiTaiKhoan)
+    {
+
+    }
+
+    public function UnsetDelete($LoaiTaiKhoan)
+    {
+
+    }
+
+    public function UPDATE($LoaiTaiKhoan)
+    {
+
+    }
 }
-}
+
+?>
 
 
 

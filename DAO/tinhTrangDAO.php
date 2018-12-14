@@ -40,4 +40,32 @@ class tinhTrangDAO extends db
 
         return $TinhTrang;
     }
+
+    public function INSERT($TinhTrang)
+    {
+        $sql = "INSERT INTO TinhTrang(MaTinhTrang, TenTinhTrang) values ($TinhTrang->MaTinhTrang, '$TinhTrang->TenTinhTrang')";
+        $this->executeQuery($sql);
+
+    }
+
+    public function DELETE($TinhTrang)
+    {
+        $sql = "DELETE FROM TinhTrang where MaTinhTrang = $TinhTrang->MaTinhTrang";
+        $this->executeQuery($sql);
+    }
+
+    public function SETDETELE($TinhTrang)
+    {
+
+    }
+
+    public function UNSETDELETE($TinhTrang)
+    {
+
+    }
+
+    public function UPDATE($TinhTrang)
+    {
+
+    }
 }

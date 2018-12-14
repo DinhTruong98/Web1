@@ -44,6 +44,33 @@ class hangSanXuatDAO extends db
 
 
     }
+
+    public function INSERT($HangSanXuat)
+    {
+        $sql = "INSERT INTO HangSanXuat (MaHangSanXuat, TenHangSanXuat, LogoURL, BiXoa) values ($HangSanXuat->MaHangSanXuat, '$HangSanXuat->TenHangSanXuat', '$HangSanXuat->LogoURL', $HangSanXuat->BiXoa)";
+        $this->executeQuery($sql);
+    }
+
+    public function DELETE($HangSanXuat)
+    {
+        $sql = " DELETE FROM HangSanXuat WHERE  MaHangSanXuat = $HangSanXuat->MaHangSanXuat";
+        $this->executeQuery($sql);
+    }
+
+    public function  SetDelete($HangSanXuat)
+    {
+
+    }
+
+    public  function UnsetDelete($HangSanXuat)
+    {
+
+    }
+
+    public function Update($HangSanXuat)
+    {
+
+    }
 }
 
 ?>

@@ -40,4 +40,30 @@ class loaiSanPhamDAO extends db
 
     }
 
+    public function INSERT($LoaiSanPham)
+    {
+        $sql = "INSERT INTO LoaiSanPham(MaLoaiSanPham, TenLoaiSanPham, BiXoa) values ($LoaiSanPham->MaLoaiSanPham, '$LoaiSanPham->TenLoaiSanPham', $LoaiSanPham->BiXoa)";
+        $this->executeQuery($sql);
+    }
+
+    public function DETELE($LoaiSanPham)
+    {
+        $sql= "DELETE FROM LoaiSanPham where MaLoaiSanPham = $LoaiSanPham->MaLoaiSanPham";
+        $this->executeQuery($sql);
+    }
+
+    public function SetDelete($LoaiSanPham)
+    {
+
+    }
+
+    public  function UnsetDelete($LoaiSanPham)
+    {
+
+    }
+
+    public function Update($LoaiSanPham)
+    {
+
+    }
 }

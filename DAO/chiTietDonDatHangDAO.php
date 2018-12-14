@@ -47,6 +47,39 @@ class chiTietDonDatHangDAO extends db
 
         return $ChiTietDonDatHang;
     }
+    // Xem lai 5 ham nay.!
+    public function  Insert($chiTietDonDatHang)
+    {
+        $sql = "insert into chiTietDonDatHang(maChiTietDonDatHang, soLuong, giaBan, maDonDatHang, maSanPham) values('$chiTietDonDatHang->maChiTietDonDatHang',$chiTietDonDatHang->SoLuong,$chiTietDonDatHang->giaBan, '$chiTietDonDatHang->maDonDatHang', $chiTietDonDatHang->maSanpham) ";
+        $this->executeQuery($sql);
+    }
+
+    public function  DELETE($ChiTietDonDatHang)
+    {
+        $sql = "DELETE FROM ChiTietDonDatHang where maChiTietDonDatHang = $ChiTietDonDatHang->$ChiTietDonDatHang";
+        $this->executeQuery($sql);
+    }
+
+    public function SetDelete($ChiTietDonDatHang)
+    {
+        $sql = "UPDATE ChiTietDonDat Set BiXoa = 1 where MaChiTietDonDatHang = $ChiTietDonDatHang->MaChiTietDonDatHang";
+        $this->executeQuery($sql);
+    }
+
+    public  function  UnsetDelete($ChiTietDonDatHang)
+    {
+        $sql = "UPDATE ChiTietDonDatHang Set BiXoa = 0 where  MaChiTietDondatHang = $ChiTietDonDatHang->MaChiTietDonDatHang";
+        $this->executeQuery($sql);
+    }
+
+    public  function  UPDATE($ChiTietDonDatHang)
+    {
+        $sql = "UPDATE ChiTietDonDatHang SET MaChiTietDonDatHang = $ChiTietDonDatHang->MaChiTietDonDatHang where  MaChiTietDonDatHang = $ChiTietDonDatHang->MaChiTietDonDatHang";
+        $this->executeQuery($sql);
+
+    }
+
+
 
 }
 ?>

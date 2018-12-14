@@ -45,5 +45,32 @@ class donDatHangDAO extends db
 
         return $DonDatHang;
     }
+
+    public function INSERT($DonDatHang)
+    {
+        $sql = "INSERT INTO DonDatHang(MaDonDatHang,NgayLap, TongThanhTien, MaTaiKhoan, MaTinhTrang) values ('$DonDatHang->MaDonDatHang', '$DonDatHang->NgayLap', $DonDatHang->TongThanhTien,$DonDatHang->MaTaiKhoan, $DonDatHang->MaTinhTrang)";
+        $this->executeQuery($sql);
+    }
+
+    public function DELETE($DonDatHang)
+    {
+        $sql = "DELETE FROM DonDatHang where MaDonDatHang = $DonDatHang->MaDonHang";
+        $this->executeQuery($sql);
+    }
+
+    public function SetDelete($DonDatHang)
+    {
+
+    }
+
+    public function UnSetDelete($DonDatHang)
+    {
+
+    }
+
+    public  function Update($DonDatHang)
+    {
+
+    }
 }
 
