@@ -170,6 +170,33 @@ class sanPhamDAO extends db
         return $listSanPham;
     }
 
+    public function searchByName($tenSanPham)
+    {
+        $query = "SELECT MaSanPham, TenSanPham, HinhURL, GiaSanPham, NgayNhap, SoLuongTon, SoLuongBan, SoLuotXem, MoTa, BiXoa, MaLoaiSanPham, MaHangSanXuat FROM sanpham WHERE TenSanPham LIKE '%$tenSanPham%'";
+        $result = $this->executeQuery($query);
+        $listSanPham = array();
+        while ($row = mysqli_fetch_array($result))
+        {
+            $sanPham = new sanPham();
+            $sanPham->tenSanPham = $row["TenSanPham"];
+            $sanPham->maSanPham = $row["MaSanPham"];
+            $sanPham->hinhURL = $row["HinhURL"];
+            $sanPham->giaSanPham = $row["GiaSanPham"];
+            $sanPham->ngayNhap = $row["NgayNhap"];
+            $sanPham->soLuongTon = $row["SoLuongTon"];
+            $sanPham->soLuongBan = $row["SoLuongBan"];
+            $sanPham->soLuotXem = $row["SoLuotXem"];
+            $sanPham->moTa = $row["MoTa"];
+            $sanPham->biXoa = $row["BiXoa"];
+            $sanPham->maLoaiSanPham = $row["MaLoaiSanPham"];
+            $sanPham->maHangSanXuat = $row["MaHangSanXuat"];
+
+            $listSanPham[] = $sanPham;
+
+        }
+        return $listSanPham;
+    }
+
     public function INSERT($SanPham)
     {
         $sql = "INSERT INTO SanPham (MaSanPham, TenSanPham, HinhURl, GiaSanPham, NgayNhap, SoLuongTon, SoLuongBan, SoLuotXem, MoTa, BiXoa, MaLoaiSanPham, MaHangSanXuat) 

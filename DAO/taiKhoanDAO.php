@@ -42,6 +42,9 @@ class taiKhoanDAO extends db
         $result = $this->executeQuery($query);
 
     }
+
+
+
     public function kiemTraTonTai($tenDangNhap)
     {
         $query = "SELECT * FROM taikhoan WHERE TenDangNhap = '$tenDangNhap'";

@@ -2,18 +2,18 @@
 <dl>
     <?php
 
-    if (isset($_GET['type']) == false)
+    if (isset($_POST['key']) == false)
     {
         header('location:index.php');
     }
     else
     {
-        $typeID = $_GET['type'];
+        $key = $_POST['key'];
         $sanPhamBUS = new sanPhamBUS();
-        $listSanPham = $sanPhamBUS->getByType($typeID);
-        if($sanPhamBUS->getByType($typeID) == false)
+        $listSanPham = $sanPhamBUS->searchByName($key);
+        if (($sanPhamBUS->searchByName($key)) == false)
         {
-            echo '<h1>Khoont thể tìm thấy sản phẩm</h1>';
+            echo '<h1>Không thể tìm thấy sản phẩm</h1>';
         }
         else
         foreach ($listSanPham as $sanPham)
@@ -39,4 +39,3 @@
 
 </dl>
 </div>
-

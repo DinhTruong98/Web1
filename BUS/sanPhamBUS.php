@@ -17,6 +17,19 @@ class sanPhamBUS
         }
     }
 
+    public function searchByName($tenSanPham)
+    {
+        $sanPhamDAO = new sanPhamDAO();
+        if (count($sanPhamDAO->searchByName($tenSanPham)) != 0)
+        {
+            return $sanPhamDAO->searchByName($tenSanPham);
+        }
+        else{
+            return false;
+        }
+
+    }
+
     public function getByID($pid)
     {
         $sanPhamDAO = new sanPhamDAO();
@@ -28,10 +41,10 @@ class sanPhamBUS
         {
             $sanPhamDAO = new sanPhamDAO();
             if ($this->isNull($sanPhamDAO->getBySold()) == false) {
-                echo "<h1>Sản phẩm đang tạm hết hàng</h1>";
+
                 return $sanPhamDAO->getBySold();
             } else {
-                return $sanPhamDAO->getBySold();
+                echo "<h1>Sản phẩm đang tạm hết hàng</h1>";
             }
         }
     }
@@ -41,10 +54,10 @@ class sanPhamBUS
         {
             $sanPhamDAO = new sanPhamDAO();
             if ($this->isNull($sanPhamDAO->getNewest()) == false) {
-                echo "<h1>Sản phẩm đang tạm hết hàng</h1>";
+
                 return $sanPhamDAO->getNewest();
             } else {
-                return $sanPhamDAO->getNewest();
+                echo "<h1>Sản phẩm đang tạm hết hàng</h1>";
             }
         }
     }
@@ -55,11 +68,11 @@ class sanPhamBUS
         $sanPhamDAO = new sanPhamDAO();
         if ($this->isNull($sanPhamDAO->getByBrand($brandID)) == false)
         {
-            echo "<h1>Sản phẩm đang tạm hết hàng</h1>";
+
             return $sanPhamDAO->getByBrand($brandID);
         }else
         {
-            return $sanPhamDAO->getByBrand($brandID);
+            echo "<h1>Sản phẩm đang tạm hết hàng</h1>";
         }
     }
 
@@ -68,19 +81,18 @@ class sanPhamBUS
         $sanPhamDAO = new sanPhamDAO();
         if ($this->isNull($sanPhamDAO->getByType($type)) == false)
         {
-            echo "<h1>Sản phẩm đang tạm hết hàng</h1>";
-            $sanPhamDAO->getByType($type);
+            return $sanPhamDAO->getByType($type);
         }else
         {
-            return $sanPhamDAO->getByType($type);
+            return false;
         }
     }
 
     function isNull($list)
     {
         if (count($list) == 0)
-            return false;
-        return true;
+            return true;
+        return false;
     }
 }
 
