@@ -16,36 +16,26 @@
             <li class="active"><a href="index.php">Trở về trang chủ</a></li>
 
             <?php //dưới dây là config cho menu hãng sản xuất ?>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Hãng sản xuất<span
-                        class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <?php
-                    $hangSanXuatBUS = new hangSanXuatBUS();
-                    $listHangSanXuat = $hangSanXuatBUS->getAll();
-
-                    foreach ($listHangSanXuat as $hangSanXuat)
-                    {
-                        echo "<li><a href='index.php?a=3&brand=$hangSanXuat->maHangSanXuat'>$hangSanXuat->tenHangSanXuat</a></li>";
-                    }
-                    ?>
-                </ul>
+            <li class="dropdown"><a class="" data-toggle="" href="admin.php?a=2">Quản lí hãng sản xuất<span
+                        class=""></span></a>
             </li>
 
 
             <?php //dưới dây là config cho menu loại sản phẩm ?>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Loại sản phẩm <span
-                        class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <?php
-                    $loaiSanPhamBUS = new loaiSanPhamBUS();
-                    $listLoaiSanPham = $loaiSanPhamBUS->getAll();
+            <li class="dropdown"><a class="" data-toggle="" href="admin.php?a=3">Quản lí loại sản phẩm <span
+                        class=""></span></a>
+            </li>
 
-                    foreach ($listLoaiSanPham as $loaiSanPham)
-                    {
-                        echo "<li><a href='index.php?a=2&type=$loaiSanPham->maLoaiSanPham'>$loaiSanPham->tenLoaiSanPham</a></li>";
-                    }
-                    ?>
-                </ul>
+            <li class="dropdown"><a class="" data-toggle="" href="admin.php?a=4">Quản lí sản phẩm <span
+                        class=""></span></a>
+            </li>
+            <?php //dưới dây là config cho menu loại sản phẩm ?>
+            <li class="dropdown"><a class="" data-toggle="" href="admin.php?a=5">Quản lí đơn đặt hàng <span
+                        class=""></span></a>
+            </li>
+            <?php //dưới dây là config cho menu loại sản phẩm ?>
+            <li class="dropdown"><a class="" data-toggle="" href="admin.php?a=6">Quản lí người dùng <span
+                        class=""></span></a>
             </li>
 
         </ul>

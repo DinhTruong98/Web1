@@ -19,6 +19,18 @@ include 'BUS/taiKhoanBUS.php';
 
 ?>
 
+<?php
+if(isset($_SESSION['role']) == false)
+    {
+        header("location:index.php?a=404");
+    }
+else if ($_SESSION['role'] != 'admin')
+    {
+        header("location:index.php?a=404");
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,28 +67,19 @@ include 'BUS/taiKhoanBUS.php';
             include 'GUI/mAdmin/aIndex.php';
             break;
         case 2:
-            include 'GUI/pListProductByType.php';
+            include 'GUI/mAdmin/aBrandList.php';
             break;
         case 3:
-            include 'GUI/pListProductByBrand.php';
+            include 'GUI/mAdmin/aTypeList.php';
             break;
         case 4:
-            include 'GUI/pProductDetail.php';
+            include 'GUI/mAdmin/aProductList.php';
             break;
         case 5:
-            include 'GUI/mRegister/frmRegis.php';
+            include 'GUI/mAdmin/aOrderList.php';
             break;
         case 6:
-            include 'GUI/pSearchResult.php';
-            break;
-        case 101:
-            include "GUI/mLogin/exLogin.php";
-            break;
-        case 102:
-            include "GUI/mLogin/exLogout.php";
-            break;
-        case 103:
-            include "GUI/mRegister/exRegis.php";
+            include 'GUI/mAdmin/aAccountList.php';
             break;
     }
 
