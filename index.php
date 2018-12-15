@@ -89,7 +89,7 @@ include 'BUS/taiKhoanBUS.php';
         ?>
     </div>
     <?php
-        include 'GUI/footer.php';
+        include 'GUI/pFooter.php';
     ?>
 </body>
 </html>

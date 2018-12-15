@@ -23,7 +23,7 @@ include 'BUS/taiKhoanBUS.php';
 <html lang="en">
 
 <head>
-    <title>Chào mừng đến với MOBILESHOP.COM</title>
+    <title>Trang quản trị MOBILESHOP.COM</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -37,14 +37,8 @@ include 'BUS/taiKhoanBUS.php';
 <div class="header">
 
     <?php
-    include 'GUI/pHeader.php';
+    include 'GUI/mAdmin/aHeader.php';
     ?>
-</div>
-<div class="banner">
-    <?php
-    include 'GUI/pBanner.php';
-    ?>
-    <br />
 </div>
 
 
@@ -58,7 +52,7 @@ include 'BUS/taiKhoanBUS.php';
     switch ($a)
     {
         case 1:
-            include 'GUI/pIndex.php';
+            include 'GUI/mAdmin/aIndex.php';
             break;
         case 2:
             include 'GUI/pListProductByType.php';
@@ -89,7 +83,7 @@ include 'BUS/taiKhoanBUS.php';
     ?>
 </div>
 <?php
-include 'GUI/footer.php';
+include 'GUI/pFooter.php';
 ?>
 </body>
 </html>
