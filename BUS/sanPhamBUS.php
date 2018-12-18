@@ -30,6 +30,12 @@ class sanPhamBUS
 
     }
 
+    public function viewCount($maSanPham, $luotXem)
+    {
+        $sanPhamDAO = new sanPhamDAO();
+        $sanPhamDAO->viewCount($maSanPham, $luotXem);
+    }
+
     public function getByID($pid)
     {
         $sanPhamDAO = new sanPhamDAO();

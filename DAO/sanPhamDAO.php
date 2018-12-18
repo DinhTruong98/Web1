@@ -197,6 +197,15 @@ class sanPhamDAO extends db
         return $listSanPham;
     }
 
+    //Hàm này sẽ tăng số luọt xem lên 1
+    public function viewCount($maSanPham, $soLuotXemHienTai)
+    {
+        $luotXem = $soLuotXemHienTai + 1;
+        $query = "UPDATE sanpham SET SoLuotXem =$luotXem WHERE MaSanPham = $maSanPham";
+
+        $this->executeQuery($query);
+    }
+
     public function INSERT($SanPham)
     {
         $sql = "INSERT INTO SanPham (MaSanPham, TenSanPham, HinhURl, GiaSanPham, NgayNhap, SoLuongTon, SoLuongBan, SoLuotXem, MoTa, BiXoa, MaLoaiSanPham, MaHangSanXuat) 

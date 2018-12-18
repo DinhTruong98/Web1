@@ -20,7 +20,7 @@
     $hangSanXuat = $hangSanXuatBUS->getByID($sanPham->maHangSanXuat);
     $loaiSanPhamBUS = new loaiSanPhamBUS();
     $loaiSanPham = $loaiSanPhamBUS->getByTID($sanPham->maLoaiSanPham);
-
+    $sanPhamBUS->viewCount($sanPham->maSanPham, $sanPham->soLuotXem);
 
     echo "
     <div class='container'>
@@ -51,6 +51,10 @@
             <td>$sanPham->soLuongTon</td>
         </tr>
         <tr>
+            <th>Số lượt xem</th>
+            <td>$sanPham->soLuotXem</td>
+        </tr>
+        <tr>
             <th>Ngày nhập</th>
             <td>$sanPham->ngayNhap</td>
         </tr>
@@ -65,6 +69,10 @@
     </table>
         </div>
     </div>
+    <div align='center'>
+        <a href='#' class='btn btn-success'><span class='glyphicon glyphicon-shopping-cart'></span> Thêm vào giỏ</a>
+    </div>
+            
             <h2>Mô tả về sản phẩm</h2>
     <h4>$sanPham->moTa</h4>
     ";
