@@ -11,7 +11,6 @@
     {
         header('location:index.php');
     }
-
     $pid = $_GET['pid'];
 
     $sanPhamBUS = new sanPhamBUS();

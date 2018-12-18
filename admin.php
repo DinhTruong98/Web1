@@ -81,6 +81,9 @@ else if ($_SESSION['role'] != 'admin')
         case 6:
             include 'GUI/mAdmin/aAccountList.php';
             break;
+        case 101:
+            include 'GUI/mAdmin/exAdd.php';
+            break;
     }
 
     ?>
