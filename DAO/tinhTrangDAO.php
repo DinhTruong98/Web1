@@ -12,7 +12,7 @@ class tinhTrangDAO extends db
     {
         $listTinhTrang = array();
         $query = "Select MaTinhTrang, TenTinhTrang from TinhTrang";
-        $result = this->$this->executeQuery($query);
+        $result = $this->executeQuery($query);
         while ($row = mysqli_fetch_array($result))
         {
             $TinhTrang = new TinhTrang();

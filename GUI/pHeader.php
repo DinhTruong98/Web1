@@ -17,7 +17,7 @@
                 <ul class="dropdown-menu">
             <?php
                 $hangSanXuatBUS = new hangSanXuatBUS();
-                $listHangSanXuat = $hangSanXuatBUS->getAll();
+                $listHangSanXuat = $hangSanXuatBUS->getAvailable();
 
                 foreach ($listHangSanXuat as $hangSanXuat)
                 {

@@ -94,6 +94,8 @@ class sanPhamBUS
         }
     }
 
+
+
     function isNull($list)
     {
         if (count($list) == 0)
