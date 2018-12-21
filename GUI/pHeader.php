@@ -17,7 +17,7 @@
                 <ul class="dropdown-menu">
             <?php
                 $hangSanXuatBUS = new hangSanXuatBUS();
-                $listHangSanXuat = $hangSanXuatBUS->getAvailable();
+                $listHangSanXuat = $hangSanXuatBUS->getAvailable()                                  ;
 
                 foreach ($listHangSanXuat as $hangSanXuat)
                 {
@@ -34,7 +34,7 @@
                 <ul class="dropdown-menu">
                     <?php
                     $loaiSanPhamBUS = new loaiSanPhamBUS();
-                    $listLoaiSanPham = $loaiSanPhamBUS->getAll();
+                    $listLoaiSanPham = $loaiSanPhamBUS->getAvailable();
 
                     foreach ($listLoaiSanPham as $loaiSanPham)
                     {

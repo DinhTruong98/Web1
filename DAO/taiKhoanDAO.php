@@ -10,8 +10,51 @@ class taiKhoanDAO extends db
 {
     public function getAll()
     {
+        $listTaiKhoan = array();
+        $query = "SELECT MaTaiKhoan, TenDangNhap, MatKhau, TenHienThi, DiaChi, DienThoai, Email, BiXoa, MaLoaiTaiKhoan FROM taikhoan";
+        $result = $this->executeQuery($query);
+        while ($row = mysqli_fetch_array($result)) {
+            $taiKhoan = new taiKhoan();
+            $taiKhoan->maTaiKhoan = $row["MaTaiKhoan"];
+            $taiKhoan->tenDangNhap = $row["TenDangNhap"];
+            $taiKhoan->matKhau = $row["MatKhau"];
+            $taiKhoan->tenHienThi = $row["TenHienThi"];
+            $taiKhoan->diaChi = $row["DiaChi"];
+            $taiKhoan->soDienThoai = $row["DienThoai"];
+            $taiKhoan->email = $row["Email"];
+            $taiKhoan->biXoa = $row["BiXoa"];
+            $taiKhoan->maLoaiTaiKhoan = $row["MaLoaiTaiKhoan"];
 
+            $listTaiKhoan[] = $taiKhoan;
+
+        }
+        return $listTaiKhoan;
     }
+
+    public function getAvailable()
+    {
+        $listTaiKhoan = array();
+        $query = "SELECT MaTaiKhoan, TenDangNhap, MatKhau, TenHienThi, DiaChi, DienThoai, Email, BiXoa, MaLoaiTaiKhoan FROM taikhoan WHERE BiXoa = 0";
+        $result = $this->executeQuery($query);
+        while ($row = mysqli_fetch_array($result)) {
+            $taiKhoan = new taiKhoan();
+            $taiKhoan->maTaiKhoan = $row["MaTaiKhoan"];
+            $taiKhoan->tenDangNhap = $row["TenDangNhap"];
+            $taiKhoan->matKhau = $row["MatKhau"];
+            $taiKhoan->tenHienThi = $row["TenHienThi"];
+            $taiKhoan->diaChi = $row["DiaChi"];
+            $taiKhoan->soDienThoai = $row["DienThoai"];
+            $taiKhoan->email = $row["Email"];
+            $taiKhoan->biXoa = $row["BiXoa"];
+            $taiKhoan->maLoaiTaiKhoan = $row["MaLoaiTaiKhoan"];
+
+            $listTaiKhoan[] = $taiKhoan;
+
+        }
+        return $listTaiKhoan;
+    }
+
+
 
     public function login($tenDangNhap, $matKhau)
     {
@@ -67,27 +110,40 @@ class taiKhoanDAO extends db
         return true;
     }
 
-    public function INSERT($TaiKhoan)
+    public function insert($TaiKhoan)
     {
-        $sql = "INSERT INTO TaiKhoan(MaTaiKhoan, TenDangNhap, MatKhau, TenHienThi, DiaChi, DienThoai, Email, BiXoa, MaLoaiTaiKhoan) 
-        values ($TaiKhoan->MaTaiKhoan,'$TaiKhoan->TenDangNhap', '$TaiKhoan->MatKhau', '$TaiKhoan->TenHienThi', '$TaiKhoan->DiaChi',
-        '$TaiKhoan->DienThoai', '$TaiKhoan->Email', $TaiKhoan->BiXoa, $TaiKhoan->MaLoaiTaiKhoan)";
+        $sql = "INSERT INTO TaiKhoan(TenDangNhap, MatKhau, TenHienThi, DiaChi, DienThoai, Email, MaLoaiTaiKhoan, BiXoa) 
+        values ('$TaiKhoan->tenDangNhap', '$TaiKhoan->matKhau', '$TaiKhoan->tenHienThi', '$TaiKhoan->diaChi',
+        '$TaiKhoan->soDienThoai', '$TaiKhoan->email', $TaiKhoan->maLoaiTaiKhoan, $TaiKhoan->biXoa)";
         $this->executeQuery($sql);
+        echo $sql;
     }
 
-    public function DELETE($TaiKhoan)
+    public function setToMember($maTaiKhoan)
     {
-        $sql = "DELETE FROM TaiKhoan where MaTaiKhoan = $TaiKhoan->MaTaiKhoan";
+        $query = "UPDATE taikhoan SET MaLoaiTaiKhoan=1 WHERE MaTaiKhoan=$maTaiKhoan";
+        $this->executeQuery($query);
+    }
+
+    public function setToAdmin($maTaiKhoan)
+    {
+        $query = "UPDATE taikhoan SET MaLoaiTaiKhoan=0 WHERE MaTaiKhoan=$maTaiKhoan";
+        $this->executeQuery($query);
+    }
+
+    public function delete($maTaiKhoan)
+    {
+        $sql = "DELETE FROM TaiKhoan where MaTaiKhoan = $maTaiKhoan";
         $this->executeQuery($sql);
 
     }
 
-    public function SETDETELE($TaiKhoan)
+    public function setDelete($maTaiKhoan)
     {
 
     }
 
-    public function UNSETDELETE($TaiKhoan)
+    public function unsetDelete($maTaiKhoan)
     {
 
     }

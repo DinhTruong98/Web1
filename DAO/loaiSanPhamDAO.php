@@ -11,10 +11,26 @@ class loaiSanPhamDAO extends db
     public function getAll()
     {
         $listLoaiSanPham = array();
+        $query = "SELECT MaLoaiSanPham, TenLoaiSanPham, BiXoa FROM loaisanpham";
+        $result = $this->executeQuery($query);
+        while ($row = mysqli_fetch_array($result)) {
+            $loaiSanPham = new loaiSanPham();
+            $loaiSanPham->tenLoaiSanPham = $row["TenLoaiSanPham"];
+            $loaiSanPham->maLoaiSanPham = $row["MaLoaiSanPham"];
+            $loaiSanPham->biXoa = $row["BiXoa"];
+            $listLoaiSanPham[] = $loaiSanPham;
+
+        }
+        return $listLoaiSanPham;
+
+    }
+
+    public function getAvailable()
+    {
+        $listLoaiSanPham = array();
         $query = "SELECT MaLoaiSanPham, TenLoaiSanPham, BiXoa FROM loaisanpham WHERE BiXoa = 0";
         $result = $this->executeQuery($query);
-        while ($row = mysqli_fetch_array($result))
-        {
+        while ($row = mysqli_fetch_array($result)) {
             $loaiSanPham = new loaiSanPham();
             $loaiSanPham->tenLoaiSanPham = $row["TenLoaiSanPham"];
             $loaiSanPham->maLoaiSanPham = $row["MaLoaiSanPham"];
@@ -22,7 +38,6 @@ class loaiSanPhamDAO extends db
 
         }
         return $listLoaiSanPham;
-
     }
 
     public function getByTID($TID)
@@ -40,30 +55,74 @@ class loaiSanPhamDAO extends db
 
     }
 
-    public function INSERT($LoaiSanPham)
+
+    public function getByID2($tid)
     {
-        $sql = "INSERT INTO LoaiSanPham(MaLoaiSanPham, TenLoaiSanPham, BiXoa) values ($LoaiSanPham->MaLoaiSanPham, '$LoaiSanPham->TenLoaiSanPham', $LoaiSanPham->BiXoa)";
+        $listHangSanXuat = array();
+        $query = "SELECT TenLoaiSanPham, MaLoaiSanPham FROM LoaiSanPham WHERE MaLoaiSanPham = '$tid'";
+        $result = $this->executeQuery($query);
+        //căt đối tượng thành từng dòng.
+        while ($row = mysqli_fetch_array($result))
+        {
+            //cắt từng cột trong row, từng biến   extract($row);
+            $hangSanXuat = new hangSanXuat();
+            $hangSanXuat->tenHangSanXuat = $row["TenHangSanXuat"];
+            $hangSanXuat->maHangSanXuat = $row["MaHangSanXuat"];
+            $listHangSanXuat[] = $hangSanXuat;
+
+        }
+        return $listHangSanXuat;
+    }
+
+    public function getByName($tname)
+    {
+        $listHangSanXuat = array();
+        $query = "SELECT TenLoaiSanPham, MaLoaiSanPham FROM LoaiSanPham WHERE  BiXoa=0 AND TenLoaiSanPham = '$tname'";
+        $result = $this->executeQuery($query);
+        //căt đối tượng thành từng dòng.
+        while ($row = mysqli_fetch_array($result))
+        {
+            //cắt từng cột trong row, từng biến   extract($row);
+            $hangSanXuat = new hangSanXuat();
+            $hangSanXuat->tenHangSanXuat = $row["TenHangSanXuat"];
+            $hangSanXuat->maHangSanXuat = $row["MaHangSanXuat"];
+            $listHangSanXuat[] = $hangSanXuat;
+
+        }
+        return $listHangSanXuat;
+    }
+
+    public function insert($tenLoaiSanPham)
+    {
+        $sql = "INSERT INTO loaisanpham ( TenLoaiSanPham, BiXoa) values ('$tenLoaiSanPham',0)";
+        $this->executeQuery($sql);
+        //echo 'Ham nay da duoc hoi o on dao';
+    }
+
+    public function detete($maLoaiSanPham)
+    {
+        $sql = " DELETE FROM LoaiSanPham WHERE  MaLoaiSanPham = $maLoaiSanPham";
         $this->executeQuery($sql);
     }
 
-    public function DETELE($LoaiSanPham)
+    public function setDelete($maLoaiSanPham)
     {
-        $sql= "DELETE FROM LoaiSanPham where MaLoaiSanPham = $LoaiSanPham->MaLoaiSanPham";
+        $sql = "UPDATE LoaiSanPham SET BiXoa=1 WHERE MaLoaiSanPham = $maLoaiSanPham";
+        $this->executeQuery($sql);
+        //echo $sql;
+    }
+
+
+    public  function unsetDelete($maLoaiSanPham)
+    {
+        $sql = "UPDATE LoaiSanPham SET BiXoa=0 WHERE MaLoaiSanPham = '$maLoaiSanPham'";
         $this->executeQuery($sql);
     }
 
-    public function SetDelete($LoaiSanPham)
+    public function update($loaiSanPham)
     {
-
-    }
-
-    public  function UnsetDelete($LoaiSanPham)
-    {
-
-    }
-
-    public function Update($LoaiSanPham)
-    {
-
+        $sql = "UPDATE LoaiSanPham SET TenLoaiSanPham = '$loaiSanPham->tenLoaiSanPham', BiXoa=$loaiSanPham->biXoa  WHERE MaLoaiSanPham = '$loaiSanPham->maLoaiSanPham'";
+        $this->executeQuery($sql);
     }
 }
+?>

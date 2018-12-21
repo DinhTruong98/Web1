@@ -8,6 +8,12 @@
 
 class taiKhoanBUS
 {
+    public function getAll()
+    {
+        $taiKhoanDAO = new taiKhoanDAO();
+        return $taiKhoanDAO->getAll();
+    }
+
     public function login($taiKhoan, $matKhau)
     {
         $taiKhoanDAO = new taiKhoanDAO();
@@ -29,6 +35,18 @@ class taiKhoanBUS
         }else return false;
     }
 
+    public function insert($taiKhoan)
+    {
+        $taiKhoanDAO = new taiKhoanDAO();
+        if ($taiKhoanDAO->kiemTraTonTai($taiKhoan->tenDangNhap) == false)
+        {
+            $taiKhoanDAO->insert($taiKhoan);
+            if ($taiKhoanDAO->kiemTraTonTai($taiKhoan->tenDangNhap) == true)
+                return true;
+            else return false;
+        }else return false;
+    }
+
     public function register($taiKhoan)
     {
         $taiKhoanDAO = new taiKhoanDAO();
@@ -45,6 +63,24 @@ class taiKhoanBUS
                 return true;
             }else return false;
         }
+    }
+
+    public function detele($maTaiKhoan)
+    {
+        $taiKhoanDAO = new taiKhoanDAO();
+        $taiKhoanDAO->delete($maTaiKhoan);
+    }
+
+    public function setToMember($maTaiKhoan)
+    {
+        $taiKhoanDAO = new taiKhoanDAO();
+        $taiKhoanDAO->setToMember($maTaiKhoan);
+    }
+
+    public function setToAdmin($maTaiKhoan)
+    {
+        $taiKhoanDAO = new taiKhoanDAO();
+        $taiKhoanDAO->setToAdmin($maTaiKhoan);
     }
 }
 

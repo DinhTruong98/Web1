@@ -82,7 +82,13 @@ else if ($_SESSION['role'] != 'admin')
             include 'GUI/mAdmin/aAccountList.php';
             break;
         case 7:
-            include 'GUI/mAdmin/frmUpdate.php';
+            include 'GUI/mAdmin/frmUpdateBrand.php';
+            break;
+        case 8:
+            include 'GUI/mAdmin/frmUpdateType.php';
+            break;
+        case 9:
+            include 'GUI/mAdmin/frmAddAccount.php';
             break;
         case 101:
             include 'GUI/mAdmin/exAddBrand.php';
@@ -101,6 +107,27 @@ else if ($_SESSION['role'] != 'admin')
             break;
         case 106:
             include 'GUI/mAdmin/exUpdateBrand.php';
+            break;
+        case 107:
+            include 'GUI/mAdmin/exAddType.php';
+            break;
+        case 108:
+            include 'GUI/mAdmin/exDeleteType.php';
+            break;
+        case 109:
+            include 'GUI/mAdmin/exSetDeleteType.php';
+            break;
+        case 110:
+            include 'GUI/mAdmin/exUnsetDeleteType.php';
+            break;
+        case 111:
+            include 'GUI/mAdmin/exUpdateType.php';
+            break;
+        case 112:
+            include 'GUI/mAdmin/exAddAccount.php';
+            break;
+        case 113:
+            include 'GUI/mAdmin/exDeleteAccount.php';
             break;
     }
 

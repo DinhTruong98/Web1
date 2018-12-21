@@ -17,3 +17,5 @@ if($hangSanXuatBUS->insert($brandName) == true)
     echo 'Thêm không thành công, vui lòng kiểm tra lại tên, có thể bị trùng';
     echo '<br></br><a href="admin.php?a=2" class="btn btn-danger">Click vào đây để trở về</a>';
 ?>
+
+
