@@ -65,10 +65,35 @@ class taiKhoanBUS
         }
     }
 
+    public function updateByAdmin($taiKhoan)
+    {
+        $taiKhoanDAO = new taiKhoanDAO();
+        $taiKhoanDAO->updateByAdmin($taiKhoan);
+        return true;
+    }
+
+    public function getByID($uid)
+    {
+        $taiKhoanDAO = new taiKhoanDAO();
+        return $taiKhoanDAO->getByID($uid);
+    }
+
     public function detele($maTaiKhoan)
     {
         $taiKhoanDAO = new taiKhoanDAO();
         $taiKhoanDAO->delete($maTaiKhoan);
+    }
+
+    public function setDelete($maTaiKhoan)
+    {
+        $taiKhoanDAO = new taiKhoanDAO();
+        $taiKhoanDAO->setDelete($maTaiKhoan);
+    }
+
+    public function unsetDelete($maTaiKhoan)
+    {
+        $taiKhoanDAO = new taiKhoanDAO();
+        $taiKhoanDAO->unsetDelete($maTaiKhoan);
     }
 
     public function setToMember($maTaiKhoan)

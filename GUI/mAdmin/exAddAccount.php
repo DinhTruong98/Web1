@@ -19,7 +19,7 @@ $taiKhoan->maLoaiTaiKhoan = $_POST['urole'];
 
 //var_dump($taiKhoan);
 $taiKhoanBUS = new taiKhoanBUS();
-if($taiKhoanBUS->insert($taiKhoan) == true)
+if($taiKhoanBUS->updateByAdmin($taiKhoan) == true)
 {
     header("location:admin.php?a=6");
 }else

@@ -55,6 +55,28 @@ class taiKhoanDAO extends db
     }
 
 
+    public function getByID($uid)
+    {
+
+        $taiKhoan = new taiKhoan();
+        $query = "SELECT MaTaiKhoan, TenDangNhap, MatKhau, TenHienThi, DiaChi, DienThoai, Email, BiXoa, MaLoaiTaiKhoan FROM taikhoan WHERE BiXoa = 0 AND MaTaiKhoan = $uid";
+        $result = $this->executeQuery($query);
+        while ($row = mysqli_fetch_array($result)) {
+            $taiKhoan = new taiKhoan();
+            $taiKhoan->maTaiKhoan = $row["MaTaiKhoan"];
+            $taiKhoan->tenDangNhap = $row["TenDangNhap"];
+            $taiKhoan->matKhau = $row["MatKhau"];
+            $taiKhoan->tenHienThi = $row["TenHienThi"];
+            $taiKhoan->diaChi = $row["DiaChi"];
+            $taiKhoan->soDienThoai = $row["DienThoai"];
+            $taiKhoan->email = $row["Email"];
+            $taiKhoan->biXoa = $row["BiXoa"];
+            $taiKhoan->maLoaiTaiKhoan = $row["MaLoaiTaiKhoan"];
+
+        }
+        return $taiKhoan;
+    }
+
 
     public function login($tenDangNhap, $matKhau)
     {
@@ -91,6 +113,17 @@ class taiKhoanDAO extends db
     public function kiemTraTonTai($tenDangNhap)
     {
         $query = "SELECT * FROM taikhoan WHERE TenDangNhap = '$tenDangNhap'";
+        $result = $this->executeQuery($query);
+        if (mysqli_num_rows($result) == 0)
+        {
+            return false;
+        }
+        return true;
+    }
+
+    public function kiemTraTonTaiByDisplayName($tenHienThi)
+    {
+        $query = "SELECT * FROM taikhoan WHERE TenHienThi = '$tenHienThi'";
         $result = $this->executeQuery($query);
         if (mysqli_num_rows($result) == 0)
         {
@@ -140,12 +173,22 @@ class taiKhoanDAO extends db
 
     public function setDelete($maTaiKhoan)
     {
-
+        $sql = "UPDATE taikhoan SET BiXoa=1 WHERE MaTaiKhoan = $maTaiKhoan";
+        $this->executeQuery($sql);
+        echo $sql;
     }
 
     public function unsetDelete($maTaiKhoan)
     {
+        $sql = "UPDATE taikhoan SET BiXoa=0 WHERE MaTaiKhoan = $maTaiKhoan";
+        $this->executeQuery($sql);
+    }
 
+    public function updateByAdmin($taiKhoan)
+    {
+        $query = "UPDATE taikhoan SET TenHienThi = '$taiKhoan->tenHienThi', Email = '$taiKhoan->email', DienThoai = '$taiKhoan->soDienThoai', DiaChi = '$taiKhoan->diaChi', MaLoaiTaiKhoan = $taiKhoan->maLoaiTaiKhoan WHERE MaTaiKhoan = $taiKhoan->maTaiKhoan";
+        $this->executeQuery($query);
+        //echo $query;
     }
 
     public function UPDATE($TaiKhoan)

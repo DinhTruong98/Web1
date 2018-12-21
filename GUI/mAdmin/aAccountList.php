@@ -13,7 +13,7 @@
     $listTaiKhoan = $taiKhoanBUS->getAll();
     foreach ($listTaiKhoan as $taiKhoan)
     {
-        echo ("<p>$taiKhoan->maTaiKhoan || $taiKhoan->tenDangNhap || Bị khoá: $taiKhoan->biXoa  || Loại tài khoản: $taiKhoan->maLoaiTaiKhoan || <a href='admin.php?a=102&bid=$hangSanXuat->maHangSanXuat'>Xoá</a> - <a href='admin.php?a=103&bid=$hangSanXuat->maHangSanXuat'>Khoá</a> - <a href='admin.php?a=104&bid=$hangSanXuat->maHangSanXuat'>Mở khoá</a> - <a href='admin.php?a=7&bid=$hangSanXuat->maHangSanXuat'>Cập nhật</a></p><hr />");
+        echo ("<p>$taiKhoan->maTaiKhoan || $taiKhoan->tenDangNhap || Bị khoá: $taiKhoan->biXoa  || Loại tài khoản: $taiKhoan->maLoaiTaiKhoan || <a href='admin.php?a=113&uid=$taiKhoan->maTaiKhoan'>Xoá</a> - <a href='admin.php?a=114&uid=$taiKhoan->maTaiKhoan'>Khoá</a> - <a href='admin.php?a=115&uid=$taiKhoan->maTaiKhoan'>Mở khoá</a> - <a href='admin.php?a=10&uid=$taiKhoan->maTaiKhoan'>Cập nhật</a></p><hr />");
     }
     ?>
 
