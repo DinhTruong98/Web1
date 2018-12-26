@@ -24,7 +24,7 @@
     ?>
 
 </dl>
-<div class ="clearfix"></div>>
+<div class ="clearfix"></div>
 <dl>
     <dt><h1>Sản phẩm bán chạy nhất</h1></dt>
     <?php

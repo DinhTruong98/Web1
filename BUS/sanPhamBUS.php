@@ -9,6 +9,19 @@ class sanPhamBUS
         $sanPhamDAO = new sanPhamDAO();
         if ($this->isNull($sanPhamDAO->getAll()) == false)
         {
+            return $sanPhamDAO->getAll();
+        }else
+        {
+            echo "<h1>Sản phẩm đang tạm hết hàng</h1>";
+            return $sanPhamDAO->getAll();
+        }
+    }
+
+    public function getAvailable()
+    {
+        $sanPhamDAO = new sanPhamDAO();
+        if ($this->isNull($sanPhamDAO->getAvailable()) == false)
+        {
             echo "<h1>Sản phẩm đang tạm hết hàng</h1>";
             return $sanPhamDAO->getAll();
         }else
@@ -55,6 +68,7 @@ class sanPhamBUS
         }
     }
 
+
     public function getByTopNew()
     {
         {
@@ -68,6 +82,64 @@ class sanPhamBUS
         }
     }
 
+    public function getRelative($sanPham)
+    {
+        {
+            $sanPhamDAO = new sanPhamDAO();
+            if ($this->isNull($sanPhamDAO->getRelative($sanPham)) == false) {
+
+                return $sanPhamDAO->getRelative($sanPham);
+            } else {
+                echo "<h1>Không thể tìm thấy sản phẩm liên quan</h1>";
+            }
+        }
+    }
+
+    public function delete($pid)
+    {
+        $sanPhamDAO = new sanPhamDAO();
+        if ($this->isNull($sanPhamDAO->getByID2($pid)) == true){
+            return false;
+        }else
+        {
+            $sanPhamDAO->delete($pid);
+            return true;
+        }
+
+    }
+
+    public function insert($sanPham)
+    {
+        $sanPhamDAO = new sanPhamDAO();
+        if ($this->isNull($sanPhamDAO->getByName($sanPham->tenSanPham)) == false)
+        {
+            return false;
+        }
+        else {
+            $sanPhamDAO->insert($sanPham);
+            if ($this->isNull($sanPhamDAO->getByName($sanPham->tenSanPham)) == false) {
+                return true;
+            } else return false;
+        }
+    }
+
+    public function setDelete($maSanPham)
+    {
+        $sanPhamDAO = new sanPhamDAO();
+        $sanPhamDAO->setDelete($maSanPham);
+    }
+
+    public function unsetDelete($maSanPham)
+    {
+        $sanPhamDAO = new sanPhamDAO();
+        $sanPhamDAO->unsetDelete($maSanPham);
+    }
+
+    public function update($sanPham)
+    {
+        $sanPhamDAO = new sanPhamDAO();
+        $sanPhamDAO->update($sanPham);
+    }
 
     public function getByBrand($brandID)
     {
@@ -94,7 +166,11 @@ class sanPhamBUS
         }
     }
 
-
+    public function search($key)
+    {
+        $sanPhamDAO = new sanPhamDAO();
+        return $sanPhamDAO->search($key);
+    }
 
     function isNull($list)
     {

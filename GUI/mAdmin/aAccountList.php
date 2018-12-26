@@ -1,9 +1,12 @@
 
 <div class="container">
-    <a href="admin.php?a=9" class="btn btn-primary">
-        + Thêm người dùng mới
-    </a>
-
+    <form method="post" action="admin.php?a=123">
+        <a href="admin.php?a=9" class="btn btn-primary">
+            + Thêm người dùng mới
+        </a> Hoặc
+        <input type="text" name="key" placeholder="Tên tài khoản cần tìm kiếm" required />
+        <input type="submit" class="btn btn-primary" value="Tìm kiếm" required />
+    </form>
     <h3>Danh sách tài khoản:</h3>
     <h5><i>Lưu ý: </i></h5>
     <hr/>

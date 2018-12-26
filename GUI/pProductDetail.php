@@ -74,8 +74,34 @@
             
             <h2>Mô tả về sản phẩm</h2>
     <h4>$sanPham->moTa</h4>
+    <hr />
     ";
 
 
 
 ?>
+
+<dl>
+    <dt><h2>Sản phẩm cùng loại được xem nhiều nhất</h2></dt>
+    <?php
+    $sanPhamBUS = new sanPhamBUS();
+    $sanPham1 = $sanPhamBUS->getByID($pid);
+    $listSanPham = $sanPhamBUS->getRelative($sanPham1);
+    //var_dump($listSanPham);
+    foreach ($listSanPham as $sanPham)
+    {
+        echo "    
+    <dd>
+        <div class='card' style='width: 20rem;'>
+            <div class='div-list-img'><img class='list-img' src='$sanPham->hinhURL' alt='Card image cap'></div>
+            <div class='card-body'>
+                <h5 class='card-title'><b>$sanPham->tenSanPham</b></h5>
+                <p class='card-text'><b>Giá: </b>$sanPham->giaSanPham $</p>
+                <a href='#' class='btn btn-success'>Thêm vào giỏ</a>
+                <br />
+                <a href='index.php?a=4&pid=$sanPham->maSanPham' class='btn'>Xem chi tiết</a>
+            </div>
+        </div>
+    </dd>";
+    }
+    ?>

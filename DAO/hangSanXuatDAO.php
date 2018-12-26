@@ -27,6 +27,24 @@ class hangSanXuatDAO extends db
 
     }
 
+    public function search($key)
+    {
+        $listHangSanXuat = array();
+        $query = "SELECT TenHangSanXuat, MaHangSanXuat FROM HangSanXuat WHERE TenHangSanXuat LIKE '%$key%'";
+        $result = $this->executeQuery($query);
+        //căt đối tượng thành từng dòng.
+        while ($row = mysqli_fetch_array($result))
+        {
+            //cắt từng cột trong row, từng biến   extract($row);
+            $hangSanXuat = new hangSanXuat();
+            $hangSanXuat->tenHangSanXuat = $row["TenHangSanXuat"];
+            $hangSanXuat->maHangSanXuat = $row["MaHangSanXuat"];
+            $listHangSanXuat[] = $hangSanXuat;
+
+        }
+        return $listHangSanXuat;
+    }
+
     public function getAll()
     {
         $listHangSanXuat = array();

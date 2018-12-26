@@ -1,12 +1,23 @@
 
 <div class="container">
 
-    <form method="post" action="admin.php?a=101">
-        <input type="text" name="bid" placeholder="Tên hãng sản xuất" required />
-        <input type="submit" class="btn btn-primary" value="Thêm" required />
+    <div class="col-sm-3">
+        <form method="post" action="admin.php?a=101">
+            <input type="text" name="bid" placeholder="Tên hãng sản xuất" required />
+            <input type="submit" class="btn btn-primary" value="Thêm" required />
+        </form>
+    </div>
+
+
+    <form method="post" action="admin.php?a=125">
+        <input type="text" name="key" placeholder="Tên hãng sản xuất" required />
+        <input type="submit" class="btn btn-primary" value="Tìm kiếm" required />
     </form>
 
-<h3>Danh sách hãng sản xuất :</h3>
+
+
+
+    <h3>Danh sách hãng sản xuất :</h3>
     <h5><i>Lưu ý: chỉ được xoá khi không còn sản phẩm nào thuộc nhà sản xuất này</i></h5>
     <hr/>
     <?php

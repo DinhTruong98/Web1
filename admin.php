@@ -93,6 +93,12 @@ else if ($_SESSION['role'] != 'admin')
         case 10:
             include 'GUI/mAdmin/frmUpdateAccount.php';
             break;
+        case 11:
+            include 'GUI/mAdmin/frmAddProduct.php';
+            break;
+        case 12:
+            include 'GUI/mAdmin/frmUpdateProduct.php';
+            break;
         case 101:
             include 'GUI/mAdmin/exAddBrand.php';
             break;
@@ -140,6 +146,36 @@ else if ($_SESSION['role'] != 'admin')
             break;
         case 116:
             include 'GUI/mAdmin/exUpdateAccount.php';
+            break;
+        case 117:
+            include 'GUI/mAdmin/exDeleteProduct.php';
+            break;
+        case 118:
+            include 'GUI/mAdmin/exAddProduct.php';
+            break;
+        case 119:
+            include 'GUI/mAdmin/exSetDeleteProduct.php';
+            break;
+        case 120:
+            include 'GUI/mAdmin/exUnsetDeleteProduct.php';
+            break;
+        case 121:
+            include 'GUI/mAdmin/exDeleteProduct.php';
+            break;
+        case 122:
+            include 'GUI/mAdmin/exUpdateProduct.php';
+            break;
+        case 123:
+            include 'GUI/mAdmin/aAccountSearchResult.php';
+            break;
+        case 124:
+            include 'GUI/mAdmin/aTypeSearchResult.php';
+            break;
+        case 125:
+            include 'GUI/mAdmin/aBrandSearchResult.php';
+            break;
+        case 126:
+            include 'GUI/mAdmin/aProductSearchResult.php';
             break;
     }
 

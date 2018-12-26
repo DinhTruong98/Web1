@@ -178,6 +178,29 @@ class taiKhoanDAO extends db
         echo $sql;
     }
 
+    public function search($key)
+    {
+        $listTaiKhoan = array();
+        $query = "SELECT MaTaiKhoan, TenDangNhap, MatKhau, TenHienThi, DiaChi, DienThoai, Email, BiXoa, MaLoaiTaiKhoan FROM taikhoan WHERE TenDangNhap LIKE '%$key%'";
+        $result = $this->executeQuery($query);
+        while ($row = mysqli_fetch_array($result)) {
+            $taiKhoan = new taiKhoan();
+            $taiKhoan->maTaiKhoan = $row["MaTaiKhoan"];
+            $taiKhoan->tenDangNhap = $row["TenDangNhap"];
+            $taiKhoan->matKhau = $row["MatKhau"];
+            $taiKhoan->tenHienThi = $row["TenHienThi"];
+            $taiKhoan->diaChi = $row["DiaChi"];
+            $taiKhoan->soDienThoai = $row["DienThoai"];
+            $taiKhoan->email = $row["Email"];
+            $taiKhoan->biXoa = $row["BiXoa"];
+            $taiKhoan->maLoaiTaiKhoan = $row["MaLoaiTaiKhoan"];
+
+            $listTaiKhoan[] = $taiKhoan;
+
+        }
+        return $listTaiKhoan;
+    }
+
     public function unsetDelete($maTaiKhoan)
     {
         $sql = "UPDATE taikhoan SET BiXoa=0 WHERE MaTaiKhoan = $maTaiKhoan";

@@ -112,6 +112,21 @@ class loaiSanPhamDAO extends db
         //echo $sql;
     }
 
+    public function search($key)
+    {
+        $listLoaiSanPham = array();
+        $query = "SELECT MaLoaiSanPham, TenLoaiSanPham, BiXoa FROM loaisanpham WHERE TenLoaiSanPham LIKE '%$key%'";
+        $result = $this->executeQuery($query);
+        while ($row = mysqli_fetch_array($result)) {
+            $loaiSanPham = new loaiSanPham();
+            $loaiSanPham->tenLoaiSanPham = $row["TenLoaiSanPham"];
+            $loaiSanPham->maLoaiSanPham = $row["MaLoaiSanPham"];
+            $loaiSanPham->biXoa = $row["BiXoa"];
+            $listLoaiSanPham[] = $loaiSanPham;
+
+        }
+        return $listLoaiSanPham;
+    }
 
     public  function unsetDelete($maLoaiSanPham)
     {

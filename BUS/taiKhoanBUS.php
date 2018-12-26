@@ -84,6 +84,12 @@ class taiKhoanBUS
         $taiKhoanDAO->delete($maTaiKhoan);
     }
 
+    public function search($key)
+    {
+        $taiKhoanDAO = new taiKhoanDAO();
+        return $taiKhoanDAO->search($key);
+    }
+
     public function setDelete($maTaiKhoan)
     {
         $taiKhoanDAO = new taiKhoanDAO();

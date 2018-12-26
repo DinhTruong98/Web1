@@ -20,6 +20,12 @@ class hangSanXuatBUS
         return $hangSanXuatDAO->getAvailable();
     }
 
+    public function search($key)
+    {
+        $hangSanXuatDAO = new hangSanXuatDAO();
+        return $hangSanXuatDAO->search($key);
+    }
+
     public function getByID($BID)
     {
         $hangSanXuatDAO = new hangSanXuatDAO();

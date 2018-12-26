@@ -13,6 +13,12 @@ class loaiSanPhamBUS
         return $loaiSanPhamDAO->getAll();
     }
 
+    public function search($key)
+    {
+        $loaiSanPhamDAO = new loaiSanPhamDAO();
+        return $loaiSanPhamDAO->search($key);
+    }
+
     function getAvailable()
     {
         $loaiSanPhamDAO = new loaiSanPhamDAO();

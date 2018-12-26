@@ -11,6 +11,60 @@ class sanPhamDAO extends db
     public function getAll()
     {
         $listSanPham = array();
+        $query = "SELECT MaSanPham, TenSanPham, HinhURL, GiaSanPham, NgayNhap, SoLuongTon, SoLuongBan, SoLuotXem, MoTa, BiXoa, MaLoaiSanPham, MaHangSanXuat FROM sanpham";
+        $result = $this->executeQuery($query);
+        while ($row = mysqli_fetch_array($result))
+        {
+            $sanPham = new sanPham();
+            $sanPham->tenSanPham = $row["TenSanPham"];
+            $sanPham->maSanPham = $row["MaSanPham"];
+            $sanPham->hinhURL = $row["HinhURL"];
+            $sanPham->giaSanPham = $row["GiaSanPham"];
+            $sanPham->ngayNhap = $row["NgayNhap"];
+            $sanPham->soLuongTon = $row["SoLuongTon"];
+            $sanPham->soLuongBan = $row["SoLuongBan"];
+            $sanPham->soLuotXem = $row["SoLuotXem"];
+            $sanPham->moTa = $row["MoTa"];
+            $sanPham->biXoa = $row["BiXoa"];
+            $sanPham->maLoaiSanPham = $row["MaLoaiSanPham"];
+            $sanPham->maHangSanXuat = $row["MaHangSanXuat"];
+
+            $listSanPham[] = $sanPham;
+
+        }
+        return $listSanPham;
+    }
+
+    public function getByID2($pid)
+    {
+        $listSanPham = array();
+        $query = "SELECT MaSanPham, TenSanPham, HinhURL, GiaSanPham, NgayNhap, SoLuongTon, SoLuongBan, SoLuotXem, MoTa, BiXoa, MaLoaiSanPham, MaHangSanXuat FROM sanpham where MaSanPham = $pid";
+        $result = $this->executeQuery($query);
+        while ($row = mysqli_fetch_array($result))
+        {
+            $sanPham = new sanPham();
+            $sanPham->tenSanPham = $row["TenSanPham"];
+            $sanPham->maSanPham = $row["MaSanPham"];
+            $sanPham->hinhURL = $row["HinhURL"];
+            $sanPham->giaSanPham = $row["GiaSanPham"];
+            $sanPham->ngayNhap = $row["NgayNhap"];
+            $sanPham->soLuongTon = $row["SoLuongTon"];
+            $sanPham->soLuongBan = $row["SoLuongBan"];
+            $sanPham->soLuotXem = $row["SoLuotXem"];
+            $sanPham->moTa = $row["MoTa"];
+            $sanPham->biXoa = $row["BiXoa"];
+            $sanPham->maLoaiSanPham = $row["MaLoaiSanPham"];
+            $sanPham->maHangSanXuat = $row["MaHangSanXuat"];
+
+            $listSanPham[] = $sanPham;
+
+        }
+        return $listSanPham;
+    }
+
+    public function getAvailable()
+    {
+        $listSanPham = array();
         $query = "SELECT MaSanPham, TenSanPham, HinhURL, GiaSanPham, NgayNhap, SoLuongTon, SoLuongBan, SoLuotXem, MoTa, BiXoa, MaLoaiSanPham, MaHangSanXuat FROM sanpham WHERE BiXoa = 0";
         $result = $this->executeQuery($query);
         while ($row = mysqli_fetch_array($result))
@@ -172,7 +226,7 @@ class sanPhamDAO extends db
 
     public function searchByName($tenSanPham)
     {
-        $query = "SELECT MaSanPham, TenSanPham, HinhURL, GiaSanPham, NgayNhap, SoLuongTon, SoLuongBan, SoLuotXem, MoTa, BiXoa, MaLoaiSanPham, MaHangSanXuat FROM sanpham WHERE TenSanPham LIKE '%$tenSanPham%'";
+        $query = "SELECT MaSanPham, TenSanPham, HinhURL, GiaSanPham, NgayNhap, SoLuongTon, SoLuongBan, SoLuotXem, MoTa, BiXoa, MaLoaiSanPham, MaHangSanXuat FROM sanpham WHERE BiXoa = 0 AND TenSanPham LIKE '%$tenSanPham%'";
         $result = $this->executeQuery($query);
         $listSanPham = array();
         while ($row = mysqli_fetch_array($result))
@@ -197,6 +251,59 @@ class sanPhamDAO extends db
         return $listSanPham;
     }
 
+    public function getByName($tenSanPham)
+    {
+        $query = "SELECT MaSanPham, TenSanPham, HinhURL, GiaSanPham, NgayNhap, SoLuongTon, SoLuongBan, SoLuotXem, MoTa, BiXoa, MaLoaiSanPham, MaHangSanXuat FROM sanpham WHERE TenSanPham = '$tenSanPham'";
+        $result = $this->executeQuery($query);
+        $listSanPham = array();
+        while ($row = mysqli_fetch_array($result))
+        {
+            $sanPham = new sanPham();
+            $sanPham->tenSanPham = $row["TenSanPham"];
+            $sanPham->maSanPham = $row["MaSanPham"];
+            $sanPham->hinhURL = $row["HinhURL"];
+            $sanPham->giaSanPham = $row["GiaSanPham"];
+            $sanPham->ngayNhap = $row["NgayNhap"];
+            $sanPham->soLuongTon = $row["SoLuongTon"];
+            $sanPham->soLuongBan = $row["SoLuongBan"];
+            $sanPham->soLuotXem = $row["SoLuotXem"];
+            $sanPham->moTa = $row["MoTa"];
+            $sanPham->biXoa = $row["BiXoa"];
+            $sanPham->maLoaiSanPham = $row["MaLoaiSanPham"];
+            $sanPham->maHangSanXuat = $row["MaHangSanXuat"];
+
+            $listSanPham[] = $sanPham;
+
+        }
+        return $listSanPham;
+    }
+
+    public function getRelative($sanPham)
+    {
+        $query = "SELECT MaSanPham, TenSanPham, HinhURL, GiaSanPham, NgayNhap, SoLuongTon, SoLuongBan, SoLuotXem, MoTa, BiXoa, MaLoaiSanPham, MaHangSanXuat FROM sanpham WHERE BiXoa = 0 AND MaLoaiSanPham = $sanPham->maLoaiSanPham ORDER BY SoLuotXem DESC LIMIT 5";
+        $result = $this->executeQuery($query);
+        $listSanPham = array();
+        while ($row = mysqli_fetch_array($result))
+        {
+            $sanPham = new sanPham();
+            $sanPham->tenSanPham = $row["TenSanPham"];
+            $sanPham->maSanPham = $row["MaSanPham"];
+            $sanPham->hinhURL = $row["HinhURL"];
+            $sanPham->giaSanPham = $row["GiaSanPham"];
+            $sanPham->ngayNhap = $row["NgayNhap"];
+            $sanPham->soLuongTon = $row["SoLuongTon"];
+            $sanPham->soLuongBan = $row["SoLuongBan"];
+            $sanPham->soLuotXem = $row["SoLuotXem"];
+            $sanPham->moTa = $row["MoTa"];
+            $sanPham->biXoa = $row["BiXoa"];
+            $sanPham->maLoaiSanPham = $row["MaLoaiSanPham"];
+            $sanPham->maHangSanXuat = $row["MaHangSanXuat"];
+
+            $listSanPham[] = $sanPham;
+
+        }
+        return $listSanPham;
+    }
     //Hàm này sẽ tăng số luọt xem lên 1
     public function viewCount($maSanPham, $soLuotXemHienTai)
     {
@@ -206,35 +313,65 @@ class sanPhamDAO extends db
         $this->executeQuery($query);
     }
 
-    public function INSERT($SanPham)
+    public function insert($sanPham)
     {
-        $sql = "INSERT INTO SanPham (MaSanPham, TenSanPham, HinhURl, GiaSanPham, NgayNhap, SoLuongTon, SoLuongBan, SoLuotXem, MoTa, BiXoa, MaLoaiSanPham, MaHangSanXuat) 
-        values ($SanPham->MaSanPham, '$SanPham->TenSanPham','$SanPham->HinhURL', $SanPham->GiaSanPham, $SanPham->NgayNhap, $SanPham->SoLuonTon, 
-         $SanPham->SoLuongBan, $SanPham->SoLuotXem, $SanPham->MoTa, $SanPham->BiXoa, $SanPham->MaLoaiSanPham, $SanPham->MaHangSanPham )";
+        $query = "INSERT INTO sanpham(TenSanPham, HinhURL, GiaSanPham, NgayNhap, SoLuongTon, MoTa, BiXoa, MaLoaiSanPham, MaHangSanXuat,SoLuongBan,SoLuotXem) VALUES ('$sanPham->tenSanPham','$sanPham->hinhURL',$sanPham->giaSanPham,CURDATE(),$sanPham->soLuongTon,'$sanPham->moTa', 0,$sanPham->maLoaiSanPham,$sanPham->maHangSanXuat,0,0)";
+        $this->executeQuery($query);
+    }
+
+    public function delete($pid)
+    {
+        $sql = "DELETE FROM SanPham where MaSanPham = $pid";
         $this->executeQuery($sql);
     }
 
-    public function DELETE($SanPham)
+    public function setDelete($maSanPham)
     {
-        $sql = "DELETE FROM SanPham where MaSanPham = $SanPham->MaSanPham";
+        $sql = "UPDATE sanpham SET BiXoa=1 WHERE MaSanPham = $maSanPham";
         $this->executeQuery($sql);
+        echo $sql;
     }
 
-    public function SETDETELE($SanPham)
+    public function unsetDelete($maSanPham)
     {
-
+        $sql = "UPDATE sanpham SET BiXoa=0 WHERE MaSanPham = $maSanPham";
+        $this->executeQuery($sql);
+        echo $sql;
     }
 
-    public function UNSETDELETE($SanPham)
+    public function update($sanPham)
     {
-
+        $query = "UPDATE sanpham SET TenSanPham='$sanPham->tenSanPham',HinhURL='$sanPham->hinhURL',GiaSanPham=$sanPham->giaSanPham,SoLuongTon=$sanPham->soLuongTon,MoTa='$sanPham->moTa',MaLoaiSanPham=$sanPham->maLoaiSanPham,MaHangSanXuat=$sanPham->maHangSanXuat WHERE MaSanPham = $sanPham->maSanPham";
+        $this->executeQuery($query);
+        //echo $query;
     }
 
-    public function UPDATE($SanPham)
+    public function search($key)
     {
+        $listSanPham = array();
+        $query = "SELECT MaSanPham, TenSanPham, HinhURL, GiaSanPham, NgayNhap, SoLuongTon, SoLuongBan, SoLuotXem, MoTa, BiXoa, MaLoaiSanPham, MaHangSanXuat FROM sanpham WHERE TenSanPham like '%$key%'";
+        $result = $this->executeQuery($query);
+        while ($row = mysqli_fetch_array($result))
+        {
+            $sanPham = new sanPham();
+            $sanPham->tenSanPham = $row["TenSanPham"];
+            $sanPham->maSanPham = $row["MaSanPham"];
+            $sanPham->hinhURL = $row["HinhURL"];
+            $sanPham->giaSanPham = $row["GiaSanPham"];
+            $sanPham->ngayNhap = $row["NgayNhap"];
+            $sanPham->soLuongTon = $row["SoLuongTon"];
+            $sanPham->soLuongBan = $row["SoLuongBan"];
+            $sanPham->soLuotXem = $row["SoLuotXem"];
+            $sanPham->moTa = $row["MoTa"];
+            $sanPham->biXoa = $row["BiXoa"];
+            $sanPham->maLoaiSanPham = $row["MaLoaiSanPham"];
+            $sanPham->maHangSanXuat = $row["MaHangSanXuat"];
 
+            $listSanPham[] = $sanPham;
+
+        }
+        return $listSanPham;
     }
-
 }
 
 ?>

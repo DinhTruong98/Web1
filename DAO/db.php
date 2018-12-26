@@ -10,7 +10,7 @@ class db
 {
     var $db_host = "localhost";
     var $db_username = "root";
-    var $db_password = "root";
+    var $db_password = "";
     var $db_name = "1660105_quanlysanpham";
 
     public function executeQuery($query)
