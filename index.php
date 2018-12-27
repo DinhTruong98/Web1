@@ -10,12 +10,14 @@
     include 'DTO/cartItem.php';
     include 'DTO/donDatHang.php';
     include 'DTO/chiTietDonDatHang.php';
+    include 'DTO/tinhTrang.php';
 
     include 'DAO/hangSanXuatDAO.php';
     include 'DAO/loaiSanPhamDAO.php';
     include 'DAO/sanPhamDAO.php';
     include 'DAO/taiKhoanDAO.php';
     include 'DAO/donDatHangDAO.php';
+    include 'DAO/tinhTrangDAO.php';
     include 'DAO/chiTietDonDatHangDAO.php';
 
     include 'BUS/hangSanXuatBUS.php';
@@ -23,6 +25,7 @@
     include 'BUS/sanPhamBUS.php';
     include 'BUS/taiKhoanBUS.php';
     include 'BUS/donDatHangBUS.php';
+    include 'BUS/tinhTrangBUS.php';
     include 'BUS/chiTietDonHangBUS.php';
 
 ?>
@@ -95,6 +98,12 @@
                 break;
             case 10:
                 include 'GUI/pOutOfStock.php';
+                break;
+            case 11:
+                include 'GUI/pAccount.php';
+                break;
+            case 12:
+                include 'GUI/pOrderDetail.php';
                 break;
             case 101:
                 include "GUI/mLogin/exLogin.php";

@@ -26,6 +26,24 @@ class donDatHangDAO extends db
         return $listDonDatHang;
     }
 
+    public  function  getByUserID($uid)
+    {
+        $listDonDatHang = array();
+        $query = "Select MaDonDatHang, NgayLap, TongThanhTien, MaTaiKhoan, MaTinhTrang from DonDatHang WHERE MaTaiKhoan = $uid";
+        $result = $this->executeQuery($query);
+        while ($row = mysqli_fetch_array($result))
+        {
+            $DonDatHang = new DonDatHang();
+            $DonDatHang->maDonDatHang = $row["MaDonDatHang"];
+            $DonDatHang->ngayLap= $row["NgayLap"];
+            $DonDatHang->tongThanhTien = $row["TongThanhTien"];
+            $DonDatHang->maTaiKhoan = $row["MaTaiKhoan"];
+            $DonDatHang->maTinhTrang = $row["MaTinhTrang"];
+            $listDonDatHang[] = $DonDatHang;
+        }
+        return $listDonDatHang;
+    }
+
     public function getByID($MaDonDatHang)
     {
 

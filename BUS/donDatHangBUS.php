@@ -28,6 +28,12 @@ class donDatHangBUS
         $donDatHangDAO->updateStatus($maTinhTrang,$maDonHang);
     }
 
+    public function getByUserID($uid)
+    {
+        $donDatHangDAO = new donDatHangDAO();
+        return $donDatHangDAO->getByUserID($uid);
+    }
+
     public function insert($ddh)
     {
         $donDatHangDAO = new donDatHangDAO();

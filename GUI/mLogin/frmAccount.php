@@ -19,7 +19,7 @@ if (isset($_SESSION['cart']) == true) {
 //var_dump($cart->soLuong);
 ?>
 <ul class="nav navbar-nav navbar-right">
-    <li><a href="#"><span class="glyphicon glyphicon-user"></span>Hi, <?php echo $_SESSION['account'];?></a></li>
+    <li><a href="index.php?a=11"><span class="glyphicon glyphicon-user"></span>Hi, <?php echo $_SESSION['account'];?></a></li>
     <?php
     if($role == 'admin')
         echo "<li><a href='admin.php'><span class='glyphicon glyphicon-cog'></span>Trang quản trị</a></li>";
