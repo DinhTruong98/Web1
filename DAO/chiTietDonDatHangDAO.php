@@ -8,7 +8,20 @@
 
 class chiTietDonDatHangDAO extends db
 {
-    public  function getALL()
+    public function deteleByOID($odid)
+    {
+        $sql = "DELETE FROM ChiTietDonDatHang where MaDonDatHang = '$odid'";
+        $this->executeQuery($sql);
+        //echo $sql;
+    }
+
+    public function detele($odid)
+    {
+        $sql = "DELETE FROM ChiTietDonDatHang where maChiTietDonDatHang = $odid";
+        $this->executeQuery($sql);
+    }
+
+    public  function getAll()
     {
         $listChiTietDonDatHang = array();
         $query = "SELECT MaChiTietDonDatHang, SoLuong, GiaBan, MaDonDatHang, MaSanPham FROM ChiTietDonDatHang";
@@ -17,7 +30,26 @@ class chiTietDonDatHangDAO extends db
         while ($row = mysqli_fetch_array($result))
         {
             $ChiTietDonDatHang = new chiTietDonDatHang();
-            $ChiTietDonDatHang->maChiTietDonDatHang = $row["MaChiTiecDonDatHang"];
+            $ChiTietDonDatHang->maChiTietDonDatHang = $row["MaChiTietDonDatHang"];
+            $ChiTietDonDatHang->soLuong = $row["SoLuong"];
+            $ChiTietDonDatHang->giaBan = $row["GiaBan"];
+            $ChiTietDonDatHang->maDonDatHang = $row["MaDonDatHang"];
+            $ChiTietDonDatHang->maSanPham = $row["MaSanPham"];
+            $listChiTietDonDatHang[]  = $ChiTietDonDatHang;
+        }
+        return $listChiTietDonDatHang;
+    }
+
+    public  function getByOID($oid)
+    {
+        $listChiTietDonDatHang = array();
+        $query = "SELECT MaChiTietDonDatHang, SoLuong, GiaBan, MaDonDatHang, MaSanPham FROM ChiTietDonDatHang WHERE MaDonDatHang = '$oid'";
+        $result = $this->executeQuery($query);
+        //cat doi tuong thanh tung dong
+        while ($row = mysqli_fetch_array($result))
+        {
+            $ChiTietDonDatHang = new chiTietDonDatHang();
+            $ChiTietDonDatHang->maChiTietDonDatHang = $row["MaChiTietDonDatHang"];
             $ChiTietDonDatHang->soLuong = $row["SoLuong"];
             $ChiTietDonDatHang->giaBan = $row["GiaBan"];
             $ChiTietDonDatHang->maDonDatHang = $row["MaDonDatHang"];
@@ -48,17 +80,12 @@ class chiTietDonDatHangDAO extends db
         return $ChiTietDonDatHang;
     }
     // Xem lai 5 ham nay.!
-    public function  Insert($chiTietDonDatHang)
+    public function  insert($chiTietDonDatHang)
     {
-        $sql = "insert into chiTietDonDatHang(maChiTietDonDatHang, soLuong, giaBan, maDonDatHang, maSanPham) values('$chiTietDonDatHang->maChiTietDonDatHang',$chiTietDonDatHang->SoLuong,$chiTietDonDatHang->giaBan, '$chiTietDonDatHang->maDonDatHang', $chiTietDonDatHang->maSanpham) ";
+        $sql = "insert into chiTietDonDatHang(maChiTietDonDatHang, soLuong, giaBan, maDonDatHang, maSanPham) values('$chiTietDonDatHang->maChiTietDonDatHang',$chiTietDonDatHang->soLuong,$chiTietDonDatHang->giaBan, '$chiTietDonDatHang->maDonDatHang', $chiTietDonDatHang->maSanPham) ";
         $this->executeQuery($sql);
     }
 
-    public function  DELETE($ChiTietDonDatHang)
-    {
-        $sql = "DELETE FROM ChiTietDonDatHang where maChiTietDonDatHang = $ChiTietDonDatHang->$ChiTietDonDatHang";
-        $this->executeQuery($sql);
-    }
 
     public function SetDelete($ChiTietDonDatHang)
     {

@@ -9,24 +9,51 @@
 class gioHang
 {
     var $listSanPham;
-
+    var $tongSoTien;
+    var $soLuong;
     public function them($sanPham)
     {
-        foreach ($this->listSanPham as $sp) {
-            if ($this->count() == 0) {
-                $this->listSanPham[] = $sanPham;
-            } else if ($sp->tenSanPham == $sanPham->tenSanPham) {
-                return false;
+        $this->soLuong++;
+        $this->tongSoTien =  $this->tongSoTien + $sanPham->giaSanPham;
+        foreach ($this->listSanPham as $item)
+        {
+            if($item->sanPham->maSanPham == $sanPham->maSanPham){
+                $item->soLuong ++;
+                return;
             }
-            var_dump($sp);
-
         }
+        $this->listSanPham[strval($sanPham->maSanPham)] = new cartItem($sanPham);
     }
+
+    public function remove($maSanPham)
+    {
+        $item = $this->listSanPham[$maSanPham];
+        if ($item == null)
+        {
+            return;
+        }
+        $this->soLuong = $this->soLuong - $item->soLuong;
+        $this->tongSoTien = $this->tongSoTien - ($item->soLuong * $item->sanPham->giaSanPham);
+        unset($this->listSanPham[$maSanPham]);
+    }
+
     public function count()
     {
         $n = count($this->listSanPham);
         return $n;
     }
+
+//    public function update($soLuongMoi, $item)
+//    {
+//        $item = $this->listSanPham[$maSanPham];
+//        if ($item == null)
+//        {
+//            return;
+//        }
+//        $this->soLuong = $this->soLuong - $item->soLuong;
+//        $this->tongSoTien = $this->tongSoTien - ($item->soLuong * $item->sanPham->giaSanPham);
+//    }
+
     public function xoa()
     {
 
@@ -35,5 +62,7 @@ class gioHang
     public function __construct()
     {
         $this->listSanPham = array();
+        $this->tongSoTien = 0;
+        $this->soLuong = 0;
     }
 }

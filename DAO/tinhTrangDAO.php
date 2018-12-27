@@ -8,7 +8,7 @@
 
 class tinhTrangDAO extends db
 {
-    public function  getALL()
+    public function  getAll()
     {
         $listTinhTrang = array();
         $query = "Select MaTinhTrang, TenTinhTrang from TinhTrang";

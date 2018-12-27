@@ -16,17 +16,26 @@ if (isset($_SESSION['cart']) == false)
     $sanPhamBUS = new sanPhamBUS();
     $sanPham = $sanPhamBUS->getByID($_GET['pid']);
     $cart = new gioHang();
-    if($cart->them($sanPham) != false) {
-        $_SESSION['cart'] = serialize($cart);
-        var_dump($cart);
-        //header('location:index.php');
+    if ($sanPham->soLuongTon <= 0)
+    {
+        header("location:index.php?a=10");
+        return;
     }
+    $cart->them($sanPham);
+    $_SESSION['cart'] = serialize($cart);
+    header('location:index.php');
+
 }
 else
 {
     //echo "bla bla";
     $sanPhamBUS = new sanPhamBUS();
     $sanPham = $sanPhamBUS->getByID($_GET['pid']);
+    if ($sanPham->soLuongTon <= 0)
+    {
+        header("location:index.php?a=10");
+        return;
+    }
     $cart = unserialize($_SESSION['cart']);
     $cart->them($sanPham);
     $_SESSION['cart'] = serialize($cart);

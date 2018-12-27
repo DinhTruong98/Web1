@@ -77,6 +77,27 @@ class taiKhoanDAO extends db
         return $taiKhoan;
     }
 
+    public function getByUsername($uname)
+    {
+
+        $taiKhoan = new taiKhoan();
+        $query = "SELECT MaTaiKhoan, TenDangNhap, MatKhau, TenHienThi, DiaChi, DienThoai, Email, BiXoa, MaLoaiTaiKhoan FROM taikhoan WHERE BiXoa = 0 AND TenDangNhap = '$uname'";
+        $result = $this->executeQuery($query);
+        while ($row = mysqli_fetch_array($result)) {
+            $taiKhoan = new taiKhoan();
+            $taiKhoan->maTaiKhoan = $row["MaTaiKhoan"];
+            $taiKhoan->tenDangNhap = $row["TenDangNhap"];
+            $taiKhoan->matKhau = $row["MatKhau"];
+            $taiKhoan->tenHienThi = $row["TenHienThi"];
+            $taiKhoan->diaChi = $row["DiaChi"];
+            $taiKhoan->soDienThoai = $row["DienThoai"];
+            $taiKhoan->email = $row["Email"];
+            $taiKhoan->biXoa = $row["BiXoa"];
+            $taiKhoan->maLoaiTaiKhoan = $row["MaLoaiTaiKhoan"];
+
+        }
+        return $taiKhoan;
+    }
 
     public function login($tenDangNhap, $matKhau)
     {

@@ -14,6 +14,12 @@ class taiKhoanBUS
         return $taiKhoanDAO->getAll();
     }
 
+    public function getByUsername($uname)
+    {
+        $taiKhoanDAO = new taiKhoanDAO();
+        return $taiKhoanDAO->getByUsername($uname);
+    }
+
     public function login($taiKhoan, $matKhau)
     {
         $taiKhoanDAO = new taiKhoanDAO();

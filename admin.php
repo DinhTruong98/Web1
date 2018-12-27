@@ -6,16 +6,25 @@ include 'DTO/hangSanXuat.php';
 include 'DTO/loaiSanPham.php';
 include 'DTO/sanPham.php';
 include 'DTO/taiKhoan.php';
+include 'DTO/donDatHang.php';
+include 'DTO/tinhTrang.php';
+include 'DTO/chiTietDonDatHang.php';
 
 include 'DAO/hangSanXuatDAO.php';
 include 'DAO/loaiSanPhamDAO.php';
 include 'DAO/sanPhamDAO.php';
 include 'DAO/taiKhoanDAO.php';
+include 'DAO/donDatHangDAO.php';
+include 'DAO/tinhTrangDAO.php';
+include 'DAO/chiTietDonDatHangDAO.php';
 
 include 'BUS/hangSanXuatBUS.php';
 include 'BUS/loaiSanPhamBUS.php';
 include 'BUS/sanPhamBUS.php';
 include 'BUS/taiKhoanBUS.php';
+include 'BUS/donDatHangBUS.php';
+include 'BUS/tinhTrangBUS.php';
+include 'BUS/chiTietDonHangBUS.php';
 
 ?>
 
@@ -99,6 +108,9 @@ else if ($_SESSION['role'] != 'admin')
         case 12:
             include 'GUI/mAdmin/frmUpdateProduct.php';
             break;
+        case 13:
+            include 'GUI/mAdmin/aOrderDetail.php';
+            break;
         case 101:
             include 'GUI/mAdmin/exAddBrand.php';
             break;
@@ -176,6 +188,12 @@ else if ($_SESSION['role'] != 'admin')
             break;
         case 126:
             include 'GUI/mAdmin/aProductSearchResult.php';
+            break;
+        case 127:
+            include 'GUI/mAdmin/exDeleteOrder.php';
+            break;
+        case 128:
+            include 'GUI/mAdmin/exUpdateStatus.php';
             break;
     }
 

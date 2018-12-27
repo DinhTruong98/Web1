@@ -8,7 +8,7 @@
 
 class donDatHangDAO extends db
 {
-    public  function  getALL()
+    public  function  getAll()
     {
         $listDonDatHang = array();
         $query = "Select MaDonDatHang, NgayLap, TongThanhTien, MaTaiKhoan, MaTinhTrang from DonDatHang";
@@ -20,41 +20,53 @@ class donDatHangDAO extends db
             $DonDatHang->ngayLap= $row["NgayLap"];
             $DonDatHang->tongThanhTien = $row["TongThanhTien"];
             $DonDatHang->maTaiKhoan = $row["MaTaiKhoan"];
-            $DonDatHang->maTinhTrang = $row["TinhTrang"];
+            $DonDatHang->maTinhTrang = $row["MaTinhTrang"];
             $listDonDatHang[] = $DonDatHang;
         }
         return $listDonDatHang;
     }
 
-    public  function  getByID($MaDonDatHang)
+    public function getByID($MaDonDatHang)
     {
 
-        $query = "Select MaDonDatHang, NgayLap, TongThanhTien, MaTaiKhoan, MaTinhTrang from DonDatHang where MaDonDatHang = $MaDonDatHang";
+        $query = "Select MaDonDatHang, NgayLap, TongThanhTien, MaTaiKhoan, MaTinhTrang from DonDatHang where MaDonDatHang = '$MaDonDatHang'";
         $result = $this->executeQuery($query);
         //cắt doi tuong thanh tung dong
-        if ($result == null)
-            return null;
-
         $row = mysqli_fetch_array($result);
             $DonDatHang = new DonDatHang();
             $DonDatHang->maDonDatHang = $row["MaDonDatHang"];
             $DonDatHang->ngayLap= $row["NgayLap"];
             $DonDatHang->tongThanhTien = $row["TongThanhTien"];
             $DonDatHang->maTaiKhoan = $row["MaTaiKhoan"];
-            $DonDatHang->maTinhTrang = $row["TinhTrang"];
-
+            $DonDatHang->maTinhTrang = $row["MaTinhTrang"];
+            //echo $query;
         return $DonDatHang;
     }
 
-    public function INSERT($DonDatHang)
+
+
+    public function insert($DonDatHang)
     {
-        $sql = "INSERT INTO DonDatHang(MaDonDatHang,NgayLap, TongThanhTien, MaTaiKhoan, MaTinhTrang) values ('$DonDatHang->MaDonDatHang', '$DonDatHang->NgayLap', $DonDatHang->TongThanhTien,$DonDatHang->MaTaiKhoan, $DonDatHang->MaTinhTrang)";
+        $sql = "INSERT INTO DonDatHang(MaDonDatHang,NgayLap, TongThanhTien, MaTaiKhoan, MaTinhTrang) values ('$DonDatHang->maDonDatHang', NOW(), $DonDatHang->tongThanhTien,$DonDatHang->maTaiKhoan, 1)";
         $this->executeQuery($sql);
+        //echo $sql;
     }
 
-    public function DELETE($DonDatHang)
+    public function giamSoLuong()
     {
-        $sql = "DELETE FROM DonDatHang where MaDonDatHang = $DonDatHang->MaDonHang";
+
+    }
+
+    public function updateStatus($maTrangThai, $maDonHang)
+    {
+        $query = "UPDATE dondathang SET MaTinhTrang = $maTrangThai WHERE MaDonDatHang = '$maDonHang'";
+        $this->executeQuery($query);
+        echo ($query);
+    }
+
+    public function delete($oid)
+    {
+        $sql = "DELETE FROM DonDatHang where MaDonDatHang = '$oid'";
         $this->executeQuery($sql);
     }
 

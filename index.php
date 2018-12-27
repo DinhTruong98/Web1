@@ -7,16 +7,23 @@
     include 'DTO/sanPham.php';
     include 'DTO/taiKhoan.php';
     include 'DTO/gioHang.php';
+    include 'DTO/cartItem.php';
+    include 'DTO/donDatHang.php';
+    include 'DTO/chiTietDonDatHang.php';
 
     include 'DAO/hangSanXuatDAO.php';
     include 'DAO/loaiSanPhamDAO.php';
     include 'DAO/sanPhamDAO.php';
     include 'DAO/taiKhoanDAO.php';
+    include 'DAO/donDatHangDAO.php';
+    include 'DAO/chiTietDonDatHangDAO.php';
 
     include 'BUS/hangSanXuatBUS.php';
     include 'BUS/loaiSanPhamBUS.php';
     include 'BUS/sanPhamBUS.php';
     include 'BUS/taiKhoanBUS.php';
+    include 'BUS/donDatHangBUS.php';
+    include 'BUS/chiTietDonHangBUS.php';
 
 ?>
 
@@ -80,6 +87,15 @@
             case 7:
                 include 'GUI/pCart.php';
                 break;
+            case 8:
+                include 'GUI/pPayment.php';
+                break;
+            case 9:
+                include 'GUI/pAlert.php';
+                break;
+            case 10:
+                include 'GUI/pOutOfStock.php';
+                break;
             case 101:
                 include "GUI/mLogin/exLogin.php";
                 break;
@@ -91,6 +107,15 @@
                 break;
             case 104:
                 include "GUI/exAddToCart.php";
+                break;
+            case 105:
+                include "GUI/exOrder.php";
+                break;
+            case 106:
+                include "GUI/exDeleteFromCart.php";
+                break;
+            case 107:
+                include "GUI/exPayment.php";
                 break;
             default:
                 include "GUI/pError.php";
