@@ -7,20 +7,24 @@
  */
 if (isset($_SESSION['role']) == false)
     echo "<h1>Bạn cần đăng nhập để mua sản phẩm</h1>";
-if (isset($_GET['pid']) == false)
+else if (isset($_GET['pid']) == false)
 {
-    header('location:index.php');
+    //header('location:index.php');
 }
 if (isset($_SESSION['cart']) == false)
 {
     $sanPhamBUS = new sanPhamBUS();
     $sanPham = $sanPhamBUS->getByID($_GET['pid']);
     $cart = new gioHang();
-    $cart->them($sanPham);
-    $_SESSION['cart'] = serialize($cart);
+    if($cart->them($sanPham) != false) {
+        $_SESSION['cart'] = serialize($cart);
+        var_dump($cart);
+        //header('location:index.php');
+    }
 }
 else
 {
+    //echo "bla bla";
     $sanPhamBUS = new sanPhamBUS();
     $sanPham = $sanPhamBUS->getByID($_GET['pid']);
     $cart = unserialize($_SESSION['cart']);
@@ -28,7 +32,7 @@ else
     $_SESSION['cart'] = serialize($cart);
     //$cc = unserialize($_SESSION['cart']);
     //var_dump($cc);
+    header('location:index.php');
 }
 
-header('location:index.php');
 ?>

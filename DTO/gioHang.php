@@ -12,7 +12,15 @@ class gioHang
 
     public function them($sanPham)
     {
-        $this->listSanPham[] = $sanPham;
+        foreach ($this->listSanPham as $sp) {
+            if ($this->count() == 0) {
+                $this->listSanPham[] = $sanPham;
+            } else if ($sp->tenSanPham == $sanPham->tenSanPham) {
+                return false;
+            }
+            var_dump($sp);
+
+        }
     }
     public function count()
     {
