@@ -15,6 +15,7 @@ $role = $_SESSION['role'];
     if($role == 'admin')
         echo "<li><a href='admin.php'><span class='glyphicon glyphicon-cog'></span>Trang quản trị</a></li>";
     ?>
+    <li><a href="index.php?a=7"><span class="glyphicon glyphicon-shopping-cart"></span> Giỏ</a></li>
     <li><a href="index.php?a=102"><span class="glyphicon glyphicon-log-out"></span> Đăng Xuất</a></li>
 </ul>
 

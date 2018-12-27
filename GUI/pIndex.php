@@ -14,7 +14,7 @@
             <div class='card-body'>
                 <h5 class='card-title'><b>$sanPham->tenSanPham</b></h5>
                 <p class='card-text'><b>Giá: </b>$sanPham->giaSanPham $</p>
-                <a href='#' class='btn btn-success'>Thêm vào giỏ</a>
+                <a href='index.php?a=104&pid=$sanPham->maSanPham' class='btn btn-success'>Thêm vào giỏ</a>
                 <br />
                 <a href='index.php?a=4&pid=$sanPham->maSanPham' class='btn'>Xem chi tiết</a>
             </div>
@@ -39,7 +39,7 @@
             <div class='card-body'>
                 <h5 class='card-title'><b>$sanPham->tenSanPham</b></h5>
                 <p class='card-text'><b>Giá: </b>$sanPham->giaSanPham $</p>
-                <a href='#' class='btn btn-success'>Thêm vào giỏ</a>
+                <a href='index.php?a=104&pid=$sanPham->maSanPham' class='btn btn-success'>Thêm vào giỏ</a>
                 <br />
                 <a href='index.php?a=4&pid=$sanPham->maSanPham' class='btn'>Xem chi tiết</a>
             </div>

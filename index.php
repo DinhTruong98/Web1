@@ -6,6 +6,7 @@
     include 'DTO/loaiSanPham.php';
     include 'DTO/sanPham.php';
     include 'DTO/taiKhoan.php';
+    include 'DTO/gioHang.php';
 
     include 'DAO/hangSanXuatDAO.php';
     include 'DAO/loaiSanPhamDAO.php';
@@ -76,6 +77,9 @@
             case 6:
                 include 'GUI/pSearchResult.php';
                 break;
+            case 7:
+                include 'GUI/pCart.php';
+                break;
             case 101:
                 include "GUI/mLogin/exLogin.php";
                 break;
@@ -84,6 +88,9 @@
                 break;
             case 103:
                 include "GUI/mRegister/exRegis.php";
+                break;
+            case 104:
+                include "GUI/exAddToCart.php";
                 break;
             default:
                 include "GUI/pError.php";
