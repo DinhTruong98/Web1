@@ -10,7 +10,7 @@ if (isset($_SESSION['cart']) == true)
     $cart = unserialize($_SESSION['cart']);
     $cart->remove($_GET['pid']);
     $_SESSION['cart'] = serialize($cart);
-    header("location:index.php");
+    header("location:index.php?a=7");
 }
 
 ?>

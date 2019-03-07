@@ -102,8 +102,8 @@ if (isset($_SESSION['cart']) == true) {
         ?>
         <tr>
             <td></td>
-            <td></td>
             <td><h4>Tổng số tiền: <?php echo $tongSoTien;?></h4></td>
+            <td></td>
             <td></td>;
 
 

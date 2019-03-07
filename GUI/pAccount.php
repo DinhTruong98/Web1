@@ -7,6 +7,7 @@
  */
 
 ?>
+<h2>Lịch sử mua hàng</h2>
 <table class="table">
     <tr>
         <th>Mã đơn hàng </th>

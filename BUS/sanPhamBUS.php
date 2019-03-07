@@ -17,6 +17,19 @@ class sanPhamBUS
         }
     }
 
+    public function getAllByUser($uid)
+    {
+        $sanPhamDAO = new sanPhamDAO();
+        if ($this->isNull($sanPhamDAO->getAllByUser($uid)) == false)
+        {
+            return $sanPhamDAO->getAllByUser($uid);
+        }else
+        {
+            echo "<h1>Bạn chưa có bất kì sản phẩm nào</h1>";
+            return $sanPhamDAO->getAllByUser($uid);
+        }
+    }
+
     public function getAvailable()
     {
         $sanPhamDAO = new sanPhamDAO();
@@ -108,19 +121,16 @@ class sanPhamBUS
 
     }
 
-    public function insert($sanPham)
+    public function insert($sanPham, $uid)
     {
+    }
+
+    public function insertByUser($sanPham, $uid)
+    {
+
         $sanPhamDAO = new sanPhamDAO();
-        if ($this->isNull($sanPhamDAO->getByName($sanPham->tenSanPham)) == false)
-        {
-            return false;
-        }
-        else {
-            $sanPhamDAO->insert($sanPham);
-            if ($this->isNull($sanPhamDAO->getByName($sanPham->tenSanPham)) == false) {
-                return true;
-            } else return false;
-        }
+        $sanPhamDAO->insertByUser($sanPham, $uid);
+        return true;
     }
 
     public function setDelete($maSanPham)

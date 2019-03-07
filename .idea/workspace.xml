@@ -6,9 +6,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56ff55a9-f256-4a51-8447-bf166f123040" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/BUS/donDatHangBUS.php" beforeDir="false" afterPath="$PROJECT_DIR$/BUS/donDatHangBUS.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAO/donDatHangDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/DAO/donDatHangDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BUS/sanPhamBUS.php" beforeDir="false" afterPath="$PROJECT_DIR$/BUS/sanPhamBUS.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BUS/taiKhoanBUS.php" beforeDir="false" afterPath="$PROJECT_DIR$/BUS/taiKhoanBUS.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAO/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/DAO/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAO/sanPhamDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/DAO/sanPhamDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAO/taiKhoanDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/DAO/taiKhoanDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/css/myStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/css/myStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/mAdmin/aTypeList.php" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/mAdmin/aTypeList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/mAdmin/exAddAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/mAdmin/exAddAccount.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/mAdmin/frmAddProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/mAdmin/frmAddProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/mLogin/exLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/mLogin/exLogin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/mLogin/frmAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/mLogin/frmAccount.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/mLogin/frmLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/mLogin/frmLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/mRegister/exRegis.php" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/mRegister/exRegis.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/pAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/pAccount.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/pCart.php" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/pCart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/pIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/pIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/pListProductByBrand.php" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/pListProductByBrand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/pSearchResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/pSearchResult.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,37 +39,59 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aOrderList.php">
+        <entry file="file://$PROJECT_DIR$/GUI/mRegister/frmRegis.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GUI/mLogin/frmAccount.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="60" selection-end-column="7" />
+            <state relative-caret-position="405">
+              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+              <folding>
+                <element signature="n#style#0;n#span#1;n#a#0;n#li#1;n#ul#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exUpdateStatus.php">
+        <entry file="file://$PROJECT_DIR$/GUI/mLogin/mLogin.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GUI/mLogin/frmLogin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="570">
+              <caret line="43" column="39" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DAO/donDatHangDAO.php">
+        <entry file="file://$PROJECT_DIR$/GUI/mLogin/exLogin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="31" column="126" selection-start-line="31" selection-start-column="126" selection-end-line="31" selection-end-column="126" />
+            <state relative-caret-position="45">
+              <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BUS/donDatHangBUS.php">
+        <entry file="file://$PROJECT_DIR$/GUI/pIndex.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="33" column="49" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+            <state relative-caret-position="285">
+              <caret line="19" column="94" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="94" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GUI/mRegister/exRegis.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -58,44 +99,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="105" column="41" selection-start-line="105" selection-start-column="41" selection-end-line="105" selection-end-column="41" />
+            <state relative-caret-position="319">
+              <caret line="35" selection-start-line="35" selection-end-line="46" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aOrderDetail.php">
+        <entry file="file://$PROJECT_DIR$/Shop.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="27" selection-end-line="49" selection-end-column="76" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GUI/mLogin/frmAccount.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GUI/pAccount.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GUI/pOrderDetail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            <state relative-caret-position="468">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="61" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -103,8 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" selection-start-line="20" selection-end-line="26" selection-end-column="36" />
+            <state relative-caret-position="500">
+              <caret line="42" column="15" lean-forward="true" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -123,35 +137,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/GUI/mAdmin/exUpdateProduct.php" />
-        <option value="$PROJECT_DIR$/GUI/mAdmin/exAccountSearchResult.php" />
-        <option value="$PROJECT_DIR$/BUS/sanPhamBUS.php" />
-        <option value="$PROJECT_DIR$/DAO/sanPhamDAO.php" />
-        <option value="$PROJECT_DIR$/BUS/hangSanXuatBUS.php" />
-        <option value="$PROJECT_DIR$/DAO/hangSanXuatDAO.php" />
-        <option value="$PROJECT_DIR$/BUS/loaiSanPhamBUS.php" />
-        <option value="$PROJECT_DIR$/DAO/loaiSanPhamDAO.php" />
         <option value="$PROJECT_DIR$/DAO/gioHangDAO.php" />
-        <option value="$PROJECT_DIR$/GUI/pSearchResult.php" />
-        <option value="$PROJECT_DIR$/GUI/pListProductByType.php" />
-        <option value="$PROJECT_DIR$/GUI/pListProductByBrand.php" />
-        <option value="$PROJECT_DIR$/GUI/pIndex.php" />
         <option value="$PROJECT_DIR$/GUI/mAdmin/aAccountList.php" />
         <option value="$PROJECT_DIR$/GUI/mAdmin/aAccountSearchResult.php" />
         <option value="$PROJECT_DIR$/GUI/mAdmin/aProductList.php" />
         <option value="$PROJECT_DIR$/GUI/mAdmin/aProductSearchResult.php" />
         <option value="$PROJECT_DIR$/GUI/mAdmin/aBrandList.php" />
         <option value="$PROJECT_DIR$/GUI/mAdmin/aBrandSearchResult.php" />
-        <option value="$PROJECT_DIR$/GUI/mAdmin/aTypeList.php" />
         <option value="$PROJECT_DIR$/GUI/mAdmin/aTypeSearchResult.php" />
         <option value="$PROJECT_DIR$/DAO/tinhTrangDAO.php" />
         <option value="$PROJECT_DIR$/BUS/tinhTrangBUS.php" />
         <option value="$PROJECT_DIR$/GUI/mAdmin/exDeleteOrder.php" />
         <option value="$PROJECT_DIR$/BUS/chiTietDonHang.php" />
-        <option value="$PROJECT_DIR$/GUI/pProductDetail.php" />
         <option value="$PROJECT_DIR$/GUI/exOrder.php" />
         <option value="$PROJECT_DIR$/DTO/cartItem.php" />
-        <option value="$PROJECT_DIR$/DAO/taiKhoanDAO.php" />
         <option value="$PROJECT_DIR$/BUS/taiKhoanBUS.php" />
         <option value="$PROJECT_DIR$/BUS/chiTietDonHangBUS.php" />
         <option value="$PROJECT_DIR$/DAO/chiTietDonDatHangDAO.php" />
@@ -161,28 +160,43 @@
         <option value="$PROJECT_DIR$/GUI/pCart.php" />
         <option value="$PROJECT_DIR$/GUI/pPayment.php" />
         <option value="$PROJECT_DIR$/DTO/gioHang.php" />
-        <option value="$PROJECT_DIR$/GUI/exDeleteFromCart.php" />
         <option value="$PROJECT_DIR$/GUI/pOutOfStock.php" />
         <option value="$PROJECT_DIR$/GUI/exAddToCart.php" />
-        <option value="$PROJECT_DIR$/admin.php" />
         <option value="$PROJECT_DIR$/GUI/mAdmin/aOrderList.php" />
         <option value="$PROJECT_DIR$/GUI/mAdmin/exUpdateStatus.php" />
         <option value="$PROJECT_DIR$/GUI/mAdmin/aOrderDetail.php" />
-        <option value="$PROJECT_DIR$/GUI/mLogin/frmAccount.php" />
         <option value="$PROJECT_DIR$/BUS/donDatHangBUS.php" />
         <option value="$PROJECT_DIR$/DAO/donDatHangDAO.php" />
         <option value="$PROJECT_DIR$/GUI/pOrderDetail.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/GUI/pAccount.php" />
+        <option value="$PROJECT_DIR$/DAO/db.php" />
+        <option value="$PROJECT_DIR$/GUI/mAdmin/aTypeList.php" />
+        <option value="$PROJECT_DIR$/DAO/taiKhoanDAO.php" />
+        <option value="$PROJECT_DIR$/GUI/mAdmin/exAddAccount.php" />
+        <option value="$PROJECT_DIR$/GUI/pListProductByBrand.php" />
+        <option value="$PROJECT_DIR$/GUI/pListProductByType.php" />
+        <option value="$PROJECT_DIR$/GUI/pSearchResult.php" />
+        <option value="$PROJECT_DIR$/GUI/pProductDetail.php" />
+        <option value="$PROJECT_DIR$/GUI/exDeleteFromCart.php" />
+        <option value="$PROJECT_DIR$/GUI/pIndex.php" />
+        <option value="$PROJECT_DIR$/GUI/css/myStyle.css" />
+        <option value="$PROJECT_DIR$/GUI/mRegister/frmRegis.php" />
+        <option value="$PROJECT_DIR$/GUI/mLogin/frmLogin.php" />
+        <option value="$PROJECT_DIR$/GUI/mRegister/exRegis.php" />
+        <option value="$PROJECT_DIR$/GUI/mLogin/exLogin.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/Shop.php" />
+        <option value="$PROJECT_DIR$/admin.php" />
+        <option value="$PROJECT_DIR$/GUI/mLogin/frmAccount.php" />
       </list>
     </option>
   </component>
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1366" />
-    <option name="height" value="768" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -192,50 +206,35 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Web1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Web1" type="462c0819:PsiDirectoryNode" />
+              <item name="e7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e7" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Web1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Web1" type="462c0819:PsiDirectoryNode" />
-              <item name="BUS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Web1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Web1" type="462c0819:PsiDirectoryNode" />
-              <item name="DAO" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Web1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Web1" type="462c0819:PsiDirectoryNode" />
-              <item name="DTO" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Web1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Web1" type="462c0819:PsiDirectoryNode" />
+              <item name="e7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e7" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Web1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Web1" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="mAdmin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Web1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Web1" type="462c0819:PsiDirectoryNode" />
+              <item name="e7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e7" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
               <item name="mLogin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e7" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+              <item name="mRegister" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -247,6 +246,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/GUI/pages" />
       <recent name="C:\wamp64\www\Web1\GUI" />
       <recent name="C:\wamp64\www\Web1\GUI\mLogin" />
       <recent name="C:\wamp64\www\bootstrap\img\product_img" />
@@ -301,18 +301,27 @@
       <workItem from="1545795889616" duration="17449000" />
       <workItem from="1545837194613" duration="5822000" />
       <workItem from="1545896281693" duration="36937000" />
+      <workItem from="1545935127984" duration="164000" />
+      <workItem from="1545955584374" duration="6908000" />
+      <workItem from="1547716263020" duration="5461000" />
+      <workItem from="1547793358912" duration="1106000" />
+      <workItem from="1547794953516" duration="743000" />
+      <workItem from="1547796188161" duration="1744000" />
+      <workItem from="1547798008436" duration="144000" />
+      <workItem from="1548772850437" duration="7000" />
+      <workItem from="1548773122402" duration="643000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161427000" />
+    <option name="totallyTimeSpent" value="178347000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21482602" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49879518" visible="true" weight="0.24034335" />
+      <window_info id="Structure" order="1" sideWeight="0.50120485" side_tool="true" weight="0.22317597" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32755905" />
@@ -332,7 +341,7 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21482602" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22031474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -357,347 +366,255 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/GUI/pLogin.php">
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exUpdateProduct.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/pBanner.php">
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exUnsetDeleteType.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aBrandSearchResult.php">
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exUnsetDeleteProduct.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exSetDeleteProduct.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exSetDeleteBrand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+        <state relative-caret-position="225">
+          <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aTypeSearchResult.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exUnsetDeleteBrand.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/BUS/hangSanXuatBUS.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" selection-start-line="10" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aProductList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="53" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aTypeList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" selection-start-line="24" selection-end-line="53" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aAccountList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="43" column="12" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="43" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aAccountSearchResult.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DTO/taiKhoan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/tinhTrangDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exUpdateAccount.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exDeleteBrand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="20" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aHeader.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aProductSearchResult.php">
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exDeleteOrder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="21" />
+        <state relative-caret-position="135">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/gioHangDAO.php">
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exDeleteType.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAO/taiKhoanDAO.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        <state relative-caret-position="558">
+          <caret line="234" column="10" selection-start-line="234" selection-start-column="10" selection-end-line="234" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/loaiTaiKhoanDAO.php">
+    <entry file="file://$PROJECT_DIR$/BUS/sanPhamBUS.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153" />
+        <state relative-caret-position="487">
+          <caret line="67" column="9" lean-forward="true" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DAO/sanPhamDAO.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="93" selection-start-line="93" selection-end-line="113" selection-end-column="24" />
+        <state relative-caret-position="141">
+          <caret line="161" column="44" lean-forward="true" selection-start-line="161" selection-start-column="44" selection-end-line="161" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DTO/donDatHang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DTO/cartItem.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/pProductDetail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1039">
-          <caret line="99" column="64" selection-start-line="99" selection-start-column="64" selection-end-line="99" selection-end-column="64" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#dd#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/taiKhoanDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="83" column="174" selection-start-line="83" selection-start-column="174" selection-end-line="83" selection-end-column="174" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BUS/taiKhoanBUS.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BUS/chiTietDonHangBUS.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/exOrder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/chiTietDonDatHangDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="45" column="130" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/js/myScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/pPayment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DTO/gioHang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="45" selection-start-line="45" selection-start-column="2" selection-end-line="54" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/exDeleteFromCart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/exPayment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/pAlert.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" selection-start-line="10" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/pOutOfStock.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="91" selection-start-line="6" selection-start-column="91" selection-end-line="6" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/pCart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="122" column="12" lean-forward="true" selection-start-line="122" selection-start-column="12" selection-end-line="122" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/exAddToCart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aBrandList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/frmUpdateProduct.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BUS/tinhTrangBUS.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/frmAddAccount.php">
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aAccountList.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/frmUpdateAccount.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51" />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aAccountSearchResult.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/frmAddProduct.php">
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aBrandList.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aFooter.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aIndex.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aOrderList.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aProductSearchResult.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aTypeSearchResult.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exAddAccount.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="39" column="8" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="70" />
+        <state relative-caret-position="270">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exDeleteOrder.php">
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exAddProduct.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        <state relative-caret-position="360">
+          <caret line="29" column="2" lean-forward="true" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exAddType.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exDeleteAccount.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exDeleteProduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exUpdateStatus.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/frmAddAccount.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/exUpdateType.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/pages/pCart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="285">
+          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/mLogin/frmAccount.php">
+    <entry file="file://$PROJECT_DIR$/DTO/gioHang.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DTO/cartItem.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/frmUpdateBrand.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/pages/pIndex.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        <state relative-caret-position="750">
+          <caret line="50" column="97" selection-start-line="50" selection-start-column="97" selection-end-line="50" selection-end-column="97" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BUS/donDatHangBUS.php">
+    <entry file="file://$PROJECT_DIR$/GUI/pages/pListProductByType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="33" column="49" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+        <state relative-caret-position="480">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/donDatHangDAO.php">
+    <entry file="file://$PROJECT_DIR$/GUI/pages/pProductDetail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="31" column="126" selection-start-line="31" selection-start-column="126" selection-end-line="31" selection-end-column="126" />
+        <state relative-caret-position="1110">
+          <caret line="74" column="20" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aOrderList.php">
+    <entry file="file://$PROJECT_DIR$/GUI/pages/exDeleteFromCart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="60" selection-end-column="7" />
+        <state relative-caret-position="180">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin.php">
+    <entry file="file://$PROJECT_DIR$/GUI/pages/pSearchResult.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="26" selection-end-column="36" />
+        <state relative-caret-position="480">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/mAdmin/aOrderDetail.php">
+    <entry file="file://$PROJECT_DIR$/GUI/pages/pLogin.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/pages/pListProductByBrand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="27" selection-end-line="49" selection-end-column="76" />
+        <state relative-caret-position="435">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/pOrderDetail.php">
+    <entry file="file://$PROJECT_DIR$/GUI/css/myStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        <state relative-caret-position="4005">
+          <caret line="267" column="1" selection-start-line="267" selection-start-column="1" selection-end-line="267" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mRegister/frmRegis.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mLogin/mLogin.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mLogin/frmLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="43" column="39" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mRegister/exRegis.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mLogin/exLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/pIndex.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="94" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="94" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="105" column="41" selection-start-line="105" selection-start-column="41" selection-end-line="105" selection-end-column="41" />
+        <state relative-caret-position="319">
+          <caret line="35" selection-start-line="35" selection-end-line="46" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/pAccount.php">
+    <entry file="file://$PROJECT_DIR$/Shop.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+        <state relative-caret-position="468">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="61" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="42" column="15" lean-forward="true" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/mLogin/frmAccount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#span#1;n#a#0;n#li#1;n#ul#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

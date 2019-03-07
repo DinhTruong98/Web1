@@ -24,7 +24,7 @@ class taiKhoanDAO extends db
             $taiKhoan->email = $row["Email"];
             $taiKhoan->biXoa = $row["BiXoa"];
             $taiKhoan->maLoaiTaiKhoan = $row["MaLoaiTaiKhoan"];
-
+            
             $listTaiKhoan[] = $taiKhoan;
 
         }
@@ -101,26 +101,38 @@ class taiKhoanDAO extends db
 
     public function login($tenDangNhap, $matKhau)
     {
-        $query = "SELECT * FROM taikhoan WHERE TenDangNhap = '$tenDangNhap' AND MatKhau = '$matKhau' AND BiXoa = 0";
+        $query = "SELECT MatKhau FROM taikhoan WHERE TenDangNhap = '$tenDangNhap' AND BiXoa = 0 AND MaLoaiTaiKhoan = 1";
         $result = $this->executeQuery($query);
-        if (mysqli_num_rows($result) == 0)
+
+        $row = mysqli_fetch_array($result);
+        $mk = $row["MatKhau"];
+        //echo $mk;
+
+        if (password_verify($matKhau,$mk))
         {
-            //echo 'Sai tài khoản hoặc mật khẩu';
+            return true;
+        }else
+        {
             return false;
         }
-        return true;
     }
 
     public function loginByAdmin($tenDangNhap, $matKhau)
     {
-        $query = "SELECT * FROM taikhoan WHERE TenDangNhap = '$tenDangNhap' AND MatKhau = '$matKhau' AND BiXoa = 0 AND MaLoaiTaiKhoan = 0";
+        $query = "SELECT MatKhau FROM taikhoan WHERE TenDangNhap = '$tenDangNhap' AND BiXoa = 0 AND MaLoaiTaiKhoan = 0";
         $result = $this->executeQuery($query);
-        if (mysqli_num_rows($result) == 0)
+
+        $row = mysqli_fetch_array($result);
+        $mk = $row["MatKhau"];
+        //echo $mk;
+
+        if (password_verify($matKhau,$mk))
         {
-            //echo 'Sai tài khoản hoặc mật khẩu';
+            return true;
+        }else
+        {
             return false;
         }
-        return true;
     }
     public function register($taiKhoan)
     {
@@ -166,11 +178,11 @@ class taiKhoanDAO extends db
 
     public function insert($TaiKhoan)
     {
-        $sql = "INSERT INTO TaiKhoan(TenDangNhap, MatKhau, TenHienThi, DiaChi, DienThoai, Email, MaLoaiTaiKhoan, BiXoa) 
+        $sql = "INSERT INTO taikhoan(TenDangNhap, MatKhau, TenHienThi, DiaChi, DienThoai, Email, MaLoaiTaiKhoan, BiXoa) 
         values ('$TaiKhoan->tenDangNhap', '$TaiKhoan->matKhau', '$TaiKhoan->tenHienThi', '$TaiKhoan->diaChi',
         '$TaiKhoan->soDienThoai', '$TaiKhoan->email', $TaiKhoan->maLoaiTaiKhoan, $TaiKhoan->biXoa)";
         $this->executeQuery($sql);
-        echo $sql;
+        //echo $sql;
     }
 
     public function setToMember($maTaiKhoan)

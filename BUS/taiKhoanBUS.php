@@ -22,14 +22,12 @@ class taiKhoanBUS
 
     public function login($taiKhoan, $matKhau)
     {
-        $taiKhoanDAO = new taiKhoanDAO();
 
-        if ($taiKhoanDAO->kiemTaiKhoan($taiKhoan, $matKhau) == false)
+        $taiKhoanDAO = new taiKhoanDAO();
+        if ($taiKhoanDAO->login($taiKhoan, $matKhau) == true)
         {
-            //echo 'Tài khoản không tồn tại';
-            return false;
-        }
-        return true;
+            return true;
+        }else return false;
     }
 
     public function loginByAdmin($taiKhoan, $matKhau)

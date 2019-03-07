@@ -42,7 +42,7 @@
         echo "<td>$loaiSanPham->maLoaiSanPham</td>";
         echo "<td>$loaiSanPham->tenLoaiSanPham</td>";
         echo "<td>$loaiSanPham->biXoa</td>";
-        echo "<td><a href='admin.php?a=108&tid=$loaiSanPham->maLoaiSanPham'>Xoá</a>></td>";
+        echo "<td><a href='admin.php?a=108&tid=$loaiSanPham->maLoaiSanPham'>Xoá</a></td>";
         echo "<td><a href='admin.php?a=109&tid=$loaiSanPham->maLoaiSanPham'>Khoá</a></td>";
         echo "<td><a href='admin.php?a=110&tid=$loaiSanPham->maLoaiSanPham'>Mở khoá</a></td>";
         echo "<td><a href='admin.php?a=8&tid=$loaiSanPham->maLoaiSanPham'>Cập nhật</a></td>";

@@ -8,8 +8,8 @@
 
 ?>
 <ul class="nav navbar-nav navbar-right">
-    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#regis-modal"><span class="glyphicon glyphicon-user" ></span> Đăng kí</a></li>
-    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in" ></span> Đăng nhập</a></li>
+    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#regis-modal"><span class="" ></span> Đăng kí</a></li>
+    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#login-modal"><span class="" ></span> Đăng nhập</a></li>
 </ul>
 
 
@@ -35,13 +35,14 @@
         <div class="loginmodal-container">
             <h1>Đăng kí tài khoản mới</h1><br>
             <form method="post" action="index.php?a=103">
-                <input type="text" name="account" placeholder="Tên đăng nhập" required>
-                <input type="password" name="password" placeholder="Mật khẩu" required>
-                <input type="text" name="displayname" placeholder="Tên hiển thị" required>
+                <input type="text" name="account" placeholder="Tên đăng nhập (5 - 11 kí tự)" required>
+                <input type="password" name="password" placeholder="Mật khẩu (> 8 kí tự)" required>
+                <input type="text" name="displayname" placeholder="Tên hiển thị (8 - 40 kí tự)" required>
                 <input type="email" name="email" placeholder="Email" required>
                 <input type="tel" name="phonenumber" placeholder="Số điện thoại" required>
-                <input type="text" name="address" placeholder="Địa chỉ" required>
-                <input type="submit" class="login loginmodal-submit" value="Đăng kí" required>
+                <input type="text" name="address" placeholder="Link facebook" required>
+                <div class="g-recaptcha" data-sitekey="6LfQyYoUAAAAAJ-47ERv5lFqJzecPXGunwheLu0W"></div>
+                <input type="submit" value="Đăng kí" class="btn btn-success">
             </form>
 
         </div>

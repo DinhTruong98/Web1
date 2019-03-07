@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['account']) == true) {
-    $acc = $_POST['account'];
-    $pass = $_POST['password'];
+    $acc = addslashes(stripcslashes($_POST['account']));
+    $pass = addslashes(stripcslashes($_POST['password']));
     $taiKhoanBUS = new taiKhoanBUS();
 
     if($taiKhoanBUS->loginByAdmin($acc, $pass) == true)

@@ -33,6 +33,10 @@
     <table class='table'>
         <thead class='thead-dark'>
         <tr>
+        <th>Được đăng bởi:</th>
+            <td> <a href='#'>$sanPham->tenTaiKhoan</a> - Xem shop</td>
+        </tr>
+        <tr>
             <th>Tên sản phẩm</th>
             <td>$sanPham->tenSanPham</td>
         </tr>
@@ -97,6 +101,8 @@
             <div class='card-body'>
                 <h5 class='card-title'><b>$sanPham->tenSanPham</b></h5>
                 <p class='card-text'><b>Giá: </b>$sanPham->giaSanPham $</p>
+                <p class='card-text'><b>Bởi: </b><a href='#'>$sanPham->tenTaiKhoan</a></p>
+
                 <a href='index.php?a=104&pid=$sanPham->maSanPham' class='btn btn-success'>Thêm vào giỏ</a>
                 <br />
                 <a href='index.php?a=4&pid=$sanPham->maSanPham' class='btn'>Xem chi tiết</a>

@@ -1,3 +1,4 @@
+
 <?php
     $hangSanXuatBUS = new hangSanXuatBUS();
     $listHangSanXuat = $hangSanXuatBUS->getAll();
@@ -5,9 +6,9 @@
     $listLoaiSanPham = $loaiSanPhamBUS->getAll();
 ?>
 
-<div class="container">
+<div class="container" style="text-align: center;">
     <h3>Thêm mới sản phẩm mới:</h3>
-    <form action="Shop.php?a=118" method="post">
+    <form action="Shop.php?a=102" method="post">
         <input type="text" placeholder="Tên sản phẩm" name="pname" required>
         <br /><br />
         <input type="text" placeholder="URL hình ảnh" name="ppicture" required>
