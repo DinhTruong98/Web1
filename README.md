@@ -18,4 +18,7 @@
     > const debug = require('debug')('my-namespace')
     > const name = 'my-app'
     > debug('booting %s', name)
-    - 
+    - Chọn app của mình để enable: DEBUG=my-namespace node app.js
+- Sử dụng WistonWiston
+    - >npm install winston --save
+    - >const winston = require('winston') winston.log('info', 'Hello log files!', { someKey: 'some-value'})
